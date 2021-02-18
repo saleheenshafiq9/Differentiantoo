@@ -1,17 +1,23 @@
 #include<iostream>
 #include<string.h>
 #include<sstream>
-#include <cstdlib>
+#include<cstdlib>
 #include<stdlib.h>
 #include<stdio.h>
 #include<string>
 #include<conio.h>
+#include<cctype>
+#include<cstring>
+#include<vector>
+#include<bits/stdc++.h>
+#include<math.h>
 
 
 
 void partition(char[]);
-void differentiate(char[],char);
+void differentiate(int,char,int,char);
 void calculate(int,int,char);
 void menu();
 void displayhead();
 void clrscr();
+
