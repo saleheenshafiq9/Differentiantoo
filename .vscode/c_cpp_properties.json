@@ -1,6 +1,7 @@
 {
     "configurations": [
         {
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
