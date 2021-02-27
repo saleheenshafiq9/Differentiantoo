@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1613607544 source:d:\iit\semester iii\differentiantoo final\calculate.cpp
+	"header.h"
+
+1614453396 d:\iit\semester iii\differentiantoo final\header.h
+	<iostream>
+	<string.h>
+	<sstream>
+	<cstdlib>
+	<stdlib.h>
+	<stdio.h>
+	<string>
+	<conio.h>
+	<cctype>
+	<cstring>
+	<vector>
+	<bits/stdc++.h>
+	<math.h>
+
+1614453402 source:d:\iit\semester iii\differentiantoo final\differentiate.cpp
+	"header.h"
+
+1613561280 source:d:\iit\semester iii\differentiantoo final\displayhead.cpp
+	"header.h"
+
+1614453420 source:d:\iit\semester iii\differentiantoo final\main.cpp
+	"header.h"
+
+1613948651 source:d:\iit\semester iii\differentiantoo final\menu.cpp
+	"header.h"
+
+1614453411 source:d:\iit\semester iii\differentiantoo final\partition.cpp
+	"header.h"
+
+1613946933 source:d:\iit\semester iii\differentiantoo final\stringconv.cpp
+	"header.h"
+
+1614451196 source:d:\iit\semester iii\differentiantoo final\if_trigonometry.cpp
+	"header.h"
+

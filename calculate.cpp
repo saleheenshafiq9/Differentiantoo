@@ -10,3 +10,4 @@ void calculate(int constant,int degree,char sign) {
         else
             cout<<" "<<sign<<" "<<constant<<"*x^"<<degree;
 }
+
