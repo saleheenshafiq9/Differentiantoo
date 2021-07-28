@@ -43,12 +43,16 @@ void if_trigonometry(char input[100]) {
 //
     char trigonometry_chain[50];
     int j=0,k;
+    char var_trigon;
 
     for(int i=0; i<strlen(input); i++) {
 
         if(input[i]=='(') {
-            if(input[i+2]==')')
+            if(input[i+2]==')'){
                 k=1;
+                var_trigon = input[i+1];
+            }
+
             else {
                 trigonometry_chain[j] = input[i+1];
                 j++;
@@ -70,17 +74,16 @@ void if_trigonometry(char input[100]) {
     }
 
     else {
-        trigonometry_chain[0] = 'x';
+        trigonometry_chain[0] = var_trigon;
         trigonometry_chain[1] = ')';
         trigonometry_chain[2] = '\0';
     }
 
-    if(token_trigo==1) {
-        if(token_trigo==6)
-            cout<<"-cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain<<endl;
-        else
-            cout<<"-sin("<<trigonometry_chain<<endl;
-    }
+    if(token_trigo==1)
+        cout<<"-sin("<<trigonometry_chain<<endl;
+
+    else if(token_trigo==6)
+        cout<<"-cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain<<endl;
 
     else if(token_trigo==2)
         cout<<"cos("<<trigonometry_chain<<endl;
