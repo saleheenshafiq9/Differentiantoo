@@ -41,7 +41,7 @@
 1613607544 source:c:\users\saleheen shafiq\documents\github\differentiantoo\calculate.cpp
 	"header.h"
 
-1614453396 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
+1627435681 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
 	<iostream>
 	<string.h>
 	<sstream>
@@ -56,13 +56,13 @@
 	<bits/stdc++.h>
 	<math.h>
 
-1614453402 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
+1627436174 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
 	"header.h"
 
 1613561280 source:c:\users\saleheen shafiq\documents\github\differentiantoo\displayhead.cpp
 	"header.h"
 
-1627431971 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_trigonometry.cpp
+1627432931 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_trigonometry.cpp
 	"header.h"
 
 1614453420 source:c:\users\saleheen shafiq\documents\github\differentiantoo\main.cpp
