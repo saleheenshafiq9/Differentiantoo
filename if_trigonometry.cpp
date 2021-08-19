@@ -16,35 +16,83 @@ bool function_trigonometry(char input[100]) {
     if(countLn<countTrig)
         return false;
 
-    char* if_cos = strstr(input,"cos");
-    char* if_sin = strstr(input,"sin");
-    char* if_tan = strstr(input,"tan");
-    char* if_cot = strstr(input,"cot");
-    char* if_sec = strstr(input,"sec");
-    char* if_cosec = strstr(input,"cosec");
-//    cout<<if_sec<<"check";
-    if(if_cos) {
-        if(if_cosec)
-            token_trigo = 6;
-        else
+    for(int i=0; i<strlen(input); i++){
+
+        if(input[i]=='s' && input[i+2]=='n'){
+            token_trigo = 2;
+            return true;
+        }
+
+        else if(input[i]=='c' && input[i+3]!='e'){
             token_trigo = 1;
+            return true;
+        }
+
+        else if(input[i]=='c' && input[i+3]=='e'){
+            token_trigo = 6;
+            return true;
+        }
+
+        else if(input[i]=='s' && input[i+2]=='c'){
+            token_trigo = 5;
+            return true;
+        }
+
+        else if(input[i]=='t' && input[i+2]=='n'){
+            token_trigo = 3;
+            return true;
+        }
+
+        else if(input[i]=='c' && input[i+2]=='t'){
+            token_trigo = 4;
+            return true;
+        }
     }
 
-    else if(if_sin)
-        token_trigo = 2;
+//    char* if_cosec = strstr(input,"cosec");
+//
+//    if(if_cosec){
+//        token_trigo = 6;
+//        return true;
+//    }
+//
+//    char* if_cos = strstr(input,"cos");
+//
+//    if(if_cos) {
+//        token_trigo = 1;
+//        return true;
+//    }
+//
+//    char* if_sin = strstr(input,"sin");
+//
+//    if(if_sin) {
+//        token_trigo = 2;
+//        return true;
+//    }
+//
+//    char* if_tan = strstr(input,"tan");
+//
+//    if(if_tan) {
+//        token_trigo = 3;
+//        return true;
+//    }
+//
+//    char* if_cot = strstr(input,"cot");
+//
+//    if(if_cot) {
+//        token_trigo = 4;
+//        return true;
+//    }
+//
+//    char* if_sec = strstr(input,"sec");
+//
+//    if(if_sec) {
+//        token_trigo = 5;
+//        return true;
+//    }
+//    cout<<if_sec<<"check";
 
-    else if(if_tan)
-        token_trigo = 3;
-
-    else if(if_cot)
-        token_trigo = 4;
-
-    else if(if_sec)
-        token_trigo = 5;
-
-    if(token_trigo!=0)
-        return true;
-    else
+    if(token_trigo==0)
         return false;
 }
 
@@ -77,6 +125,9 @@ void if_trigonometry(char input[100]) {
             trigonometry_chain[j] = '\0';
         }
     }
+
+//    for(int i=0; i<strlen(trigonometry_chain); i++)
+//        cout<<trigonometry_chain[i];
 
     if(token_trigo==1 || token_trigo==6 || token_trigo==4)
         cout<<"-";
