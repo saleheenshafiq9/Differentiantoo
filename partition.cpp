@@ -92,7 +92,7 @@ void value_partition(char input[100], int tokens[100]) {
         }
 
         if(sign=='+' || sign=='-' || input[i]==')') {
-//    cout<<variable<<"\n"<<coeff<<"\n"<<power;
+//    cout<<variable<<"6"<<coeff<<"\n"<<power;
 //            if(input[i]==')')
 //                sign = 'f';
             differentiate(coeff, variable, power, sign);

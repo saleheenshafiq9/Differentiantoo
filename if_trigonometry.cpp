@@ -5,6 +5,17 @@ using namespace std;
 int token_trigo = 0;
 bool function_trigonometry(char input[100]) {
 
+    int countTrig, countLn;
+    for(int i=0; i<strlen(input); i++){
+        if(input[i]=='l')
+            countLn = i;
+        else if(input[i]=='t' || input[i]=='s' || input[i]=='c')
+            countTrig = i;
+    }
+
+    if(countLn<countTrig)
+        return false;
+
     char* if_cos = strstr(input,"cos");
     char* if_sin = strstr(input,"sin");
     char* if_tan = strstr(input,"tan");
@@ -83,22 +94,22 @@ void if_trigonometry(char input[100]) {
     }
 
     if(token_trigo==1)
-        cout<<"sin("<<trigonometry_chain<<endl;
+        cout<<"sin("<<trigonometry_chain;
 
     else if(token_trigo==6)
-        cout<<"cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain<<endl;
+        cout<<"cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain;
 
     else if(token_trigo==2)
-        cout<<"cos("<<trigonometry_chain<<endl;
+        cout<<"cos("<<trigonometry_chain;
 
     else if(token_trigo==3)
-        cout<<"sec^2("<<trigonometry_chain<<endl;
+        cout<<"sec^2("<<trigonometry_chain;
 
     else if(token_trigo==4)
-        cout<<"cosec^2("<<trigonometry_chain<<endl;
+        cout<<"cosec^2("<<trigonometry_chain;
 
     else if(token_trigo==5)
-        cout<<"sec("<<trigonometry_chain<<"*tan("<<trigonometry_chain<<endl;
+        cout<<"sec("<<trigonometry_chain<<"*tan("<<trigonometry_chain;
 
     token_trigo = 0;
 
