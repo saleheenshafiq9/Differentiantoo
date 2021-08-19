@@ -45,13 +45,19 @@ int main()
             cout<<"\n\n\t\tOutput :  ";
 //        cout<<input;
             bool trigonometry_tracker = function_trigonometry(input);
+            bool ln_tracker = function_ln(input);
 
-            if(trigonometry_tracker==false) {
+            if(trigonometry_tracker==true)
+                if_trigonometry(input);
+
+            else if(ln_tracker==true)
+                if_ln(input);
+
+            else {
                 cout<<"(";
                 partition(input);
             }
-            else if(trigonometry_tracker==true)
-                if_trigonometry(input);
+
             cout<<"\n\n";
             main();
         }

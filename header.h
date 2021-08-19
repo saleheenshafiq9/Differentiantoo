@@ -19,5 +19,7 @@ void calculate(int,int,char);
 void displayhead();
 void clrscr();
 void if_trigonometry(char[]);
+void if_ln(char[]);
 bool function_trigonometry(char[]);
+bool function_ln(char[]);
 char *removeSpaces(char *);
