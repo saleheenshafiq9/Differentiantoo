@@ -70,7 +70,7 @@ void value_partition(char input[100], int tokens[100]) {
             else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='+' || input[i+1]=='-'))
                 coeff = 1001;
             else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='(' || input[i+1]==')'))
-                coeff = 1001;
+                coeff = 1002;
        }
         else if(tokens[i]==3) {
             if(input[i-1]=='(')

@@ -8,8 +8,14 @@ int sign_remover = 0;
 
 void differentiate(int coeff, char variable, int power, char sign) {
 
-    if(coeff==1001)
+    if(coeff==1001){
         return;
+    }
+
+    else if(coeff==1002){
+        cout<<"0";
+        return;
+    }
 
     int new_coeff = coeff*power;
     int new_power = power-1;

@@ -47,14 +47,14 @@ void if_ln(char input[100]) {
     if(k!=1) {
         cout<<"(";
         partition(ln_chain);
-        cout<<"*";
+        cout<<"/("<<ln_chain;
     }
 
     else {
         ln_chain[0] = var_ln;
         ln_chain[1] = ')';
         ln_chain[2] = '\0';
-    }
 
-    cout<<"1/"<<"("<<ln_chain<<")";
+        cout<<"1/"<<"("<<ln_chain;
+    }
 }
