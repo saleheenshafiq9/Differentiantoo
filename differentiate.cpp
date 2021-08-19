@@ -16,24 +16,24 @@ void differentiate(int coeff, char variable, int power, char sign) {
 
     if(universal_sign=='+' || universal_sign=='-') {
         if(new_coeff>0)
-            cout<<" "<<universal_sign<<" ";
+            cout<<universal_sign;
         else if(new_coeff<0 && new_power!=0) {
             if(sign_remover==0){
                 sign_remover++;
                 if(universal_sign=='+')
-                    cout<<" "<<"-"<<" ";
+                    cout<<"-";
             }
             else {
                 if(universal_sign=='+')
-                    cout<<" "<<"-"<<" ";
+                    cout<<"-";
                 else if(new_power<0 && universal_sign=='-')
-                    cout<<" "<<"+"<<" ";
+                    cout<<"+";
                 else
-                    cout<<" "<<"-"<<" ";
+                    cout<<"-";
             }
         }
         else if(new_power==0 || new_power==1) {
-            cout<<" "<<universal_sign<<" ";
+            cout<<universal_sign;
         }
         if(new_coeff!=1 && new_coeff!=-1)
             cout<<abs(new_coeff);

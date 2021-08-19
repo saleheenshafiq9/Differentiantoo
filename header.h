@@ -20,4 +20,4 @@ void displayhead();
 void clrscr();
 void if_trigonometry(char[]);
 bool function_trigonometry(char[]);
-
+char *removeSpaces(char *);

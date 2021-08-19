@@ -67,6 +67,9 @@ void if_trigonometry(char input[100]) {
         }
     }
 
+    if(token_trigo==1 || token_trigo==6 || token_trigo==4)
+        cout<<"-";
+
     if(k!=1) {
         cout<<"(";
         partition(trigonometry_chain);
@@ -80,10 +83,10 @@ void if_trigonometry(char input[100]) {
     }
 
     if(token_trigo==1)
-        cout<<"-sin("<<trigonometry_chain<<endl;
+        cout<<"sin("<<trigonometry_chain<<endl;
 
     else if(token_trigo==6)
-        cout<<"-cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain<<endl;
+        cout<<"cosec("<<trigonometry_chain<<"*cot("<<trigonometry_chain<<endl;
 
     else if(token_trigo==2)
         cout<<"cos("<<trigonometry_chain<<endl;
@@ -92,7 +95,7 @@ void if_trigonometry(char input[100]) {
         cout<<"sec^2("<<trigonometry_chain<<endl;
 
     else if(token_trigo==4)
-        cout<<"-cosec^2("<<trigonometry_chain<<endl;
+        cout<<"cosec^2("<<trigonometry_chain<<endl;
 
     else if(token_trigo==5)
         cout<<"sec("<<trigonometry_chain<<"*tan("<<trigonometry_chain<<endl;

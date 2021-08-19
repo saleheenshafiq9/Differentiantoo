@@ -52,7 +52,7 @@ int main()
             }
             else if(trigonometry_tracker==true)
                 if_trigonometry(input);
-
+            cout<<"\n\n";
             main();
         }
 
