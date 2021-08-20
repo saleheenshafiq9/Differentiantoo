@@ -43,4 +43,19 @@ char* c_str(string s){
     return c;
 }
 
+int find_char_type(char c){
+
+    if(is_alphabte(c))
+        return 1;
+    else if(is_digit(c))
+        return 2;
+    else if(is_operator(c))
+        return 3;
+    else if(is_power(c))
+        return 4;
+    else if(is_bracket(c))
+        return 5;
+    else
+        return 0;
+}
 

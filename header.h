@@ -20,10 +20,17 @@ string differentiate(int,char,int,char);
 void calculate(int,int,char);
 void displayhead();
 void clrscr();
-void if_trigonometry(char[]);
+string if_trigonometry(char[]);
 void if_ln(char[]);
 bool function_trigonometry(char[]);
 bool function_ln(char[]);
 char *removeSpaces(char *);
 string num_to_str(int);
 char* c_str(string);
+int find_char_type(char);
+
+bool is_bracket(char);
+bool is_power(char);
+bool is_operator(char);
+bool is_digit(int);
+bool is_alphabte(int);
