@@ -2,6 +2,8 @@
 
 using namespace std;
 char input[100];
+vector<string> fans;
+string ans =  "";
 
 char *removeSpaces(char *input)
 {
@@ -24,6 +26,15 @@ void cutSpace() {
 void clrscr()
 {
     system("@cls||clear");
+}
+
+void if_algebric(char input2[100]){
+
+    cout<<"(";
+    ans += "(";
+    ans += partition(input2);
+    fans.push_back(ans);
+    ans = "";
 }
 
 int main()
@@ -54,11 +65,17 @@ int main()
                 if_ln(input);
 
             else {
-                cout<<"(";
-                partition(input);
+                if_algebric(input);
             }
-
-            cout<<"\n\n";
+            cout<<"\n"<<fans[0]<<"\n";
+//            if_algebric(c_str(fans[0]));
+//            cout<<"\n"<<fans[1]<<"\n";
+////            fans.push_back(input.c_string());
+//            for (int i = 0; i < fans.size(); ++i)
+//   {
+//      cout << fans[i] << '\n';
+//   }
+//            cout<<"\n\n";
             main();
         }
 

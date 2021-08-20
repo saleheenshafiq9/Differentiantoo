@@ -38,10 +38,10 @@
 1614451196 source:d:\iit\semester iii\differentiantoo final\if_trigonometry.cpp
 	"header.h"
 
-1613607544 source:c:\users\saleheen shafiq\documents\github\differentiantoo\calculate.cpp
+1629453888 source:c:\users\saleheen shafiq\documents\github\differentiantoo\calculate.cpp
 	"header.h"
 
-1629363400 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
+1629453903 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
 	<iostream>
 	<string.h>
 	<sstream>
@@ -56,24 +56,26 @@
 	<bits/stdc++.h>
 	<math.h>
 
-1629369048 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
+1629452420 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
 	"header.h"
 
 1613561280 source:c:\users\saleheen shafiq\documents\github\differentiantoo\displayhead.cpp
 	"header.h"
 
-1629403067 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_trigonometry.cpp
+1629409038 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_trigonometry.cpp
 	"header.h"
 
-1629363415 source:c:\users\saleheen shafiq\documents\github\differentiantoo\main.cpp
+1629453891 source:c:\users\saleheen shafiq\documents\github\differentiantoo\main.cpp
 	"header.h"
 
-1629372137 source:c:\users\saleheen shafiq\documents\github\differentiantoo\partition.cpp
+1629453898 source:c:\users\saleheen shafiq\documents\github\differentiantoo\partition.cpp
 	"header.h"
 
-1629361690 source:c:\users\saleheen shafiq\documents\github\differentiantoo\stringconv.cpp
+1629453917 source:c:\users\saleheen shafiq\documents\github\differentiantoo\stringconv.cpp
 	"header.h"
 
 1629375573 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_ln.cpp
 	"header.h"
+
+1629446746 c:\users\saleheen shafiq\documents\github\differentiantoo\vh.h
 

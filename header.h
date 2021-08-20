@@ -12,9 +12,10 @@
 #include<bits/stdc++.h>
 #include<math.h>
 
+using namespace std;
 
-void partition(char[]);
-void differentiate(int,char,int,char);
+string partition(char[]);
+string differentiate(int,char,int,char);
 void calculate(int,int,char);
 void displayhead();
 void clrscr();
@@ -23,3 +24,5 @@ void if_ln(char[]);
 bool function_trigonometry(char[]);
 bool function_ln(char[]);
 char *removeSpaces(char *);
+string num_to_str(int);
+char* c_str(string);

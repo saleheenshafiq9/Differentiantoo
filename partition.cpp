@@ -43,9 +43,10 @@ bool is_bracket(char c)
 }
 
 
-void value_partition(char input[100], int tokens[100]) {
+string value_partition(char input[100], int tokens[100]) {
     int power=1, coeff=1;
     char variable, sign='\0';
+    string ans3 = "";
 
     for(int i=0; i<strlen(input); i++) {
         if(tokens[i]==1) {
@@ -95,7 +96,7 @@ void value_partition(char input[100], int tokens[100]) {
 //    cout<<variable<<"6"<<coeff<<"\n"<<power;
 //            if(input[i]==')')
 //                sign = 'f';
-            differentiate(coeff, variable, power, sign);
+            ans3 += differentiate(coeff, variable, power, sign);
             sign = '\0';
             coeff = 1;
             power = 1;
@@ -107,11 +108,13 @@ void value_partition(char input[100], int tokens[100]) {
     variable = '\0';
     sign = '\0';
     cout<<")";
+    ans3 += ")";
+    return ans3;
 }
 
 
-void partition(char input[100]) {
-
+string partition(char input[100]) {
+    string ans4="";
     int j=0,k;
     int tokens[100];
     for(int i=0; i<strlen(input); i++) {
@@ -128,6 +131,7 @@ void partition(char input[100]) {
             else if(is_bracket(input[i]))
                 tokens[i] = 5;
   }
-    value_partition(input, tokens);
+    ans4 += value_partition(input, tokens);
+    return ans4;
 }
 
