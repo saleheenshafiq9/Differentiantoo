@@ -64,8 +64,11 @@ void menu(){
                 ans = "";
             }
 
-            else if(ln_tracker==true)
-                if_ln(input);
+            else if(ln_tracker==true){
+                ans += if_ln(input);
+                fans.push_back(ans);
+                ans = "";
+            }
 
             else {
                 if_algebric(input);

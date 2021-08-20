@@ -14,8 +14,9 @@ bool function_ln(char input[100]) {
         return false;
 }
 
-void if_ln(char input[100]) {
+string if_ln(char input[100]) {
 
+    string ans6 = "";
     char ln_chain[50];
     int j=0,k;
     char var_ln;
@@ -23,9 +24,13 @@ void if_ln(char input[100]) {
     for(int i=0; i<strlen(input); i++) {
 
         if(input[i]=='(') {
-            if(input[i+2]==')' && input[i+3]!=')'){
+            if(input[i+2]==')' && input[i+3]==')'){
                 k=1;
-                var_ln = input[i+1];
+                int i_type = find_char_type(input[i+1]);
+                if(i_type==1)
+                    var_ln = input[i+1];
+                else if(i_type==2)
+                    var_ln = '\0';
             }
 
             else {
@@ -49,27 +54,46 @@ void if_ln(char input[100]) {
 
     if(k!=1 && trigon_tracker_ln==false && ln_tracker_ln==false) {
         cout<<"(";
-        partition(ln_chain);
+        ans6 += "(";
+        ans6 += partition(ln_chain);
         cout<<"/("<<ln_chain;
+        ans6 += "/(";
+        for(int i=0; ln_chain[i]!='\0'; i++)
+            ans6 += ln_chain[i];
     }
 
     else if(k==1 && trigon_tracker_ln==false && ln_tracker_ln==false){
-        ln_chain[0] = var_ln;
-        ln_chain[1] = ')';
-        ln_chain[2] = '\0';
+        if(var_ln=='\0'){
+            ans6 = "0";
+            return ans6;
+        }
+        else {
+            ln_chain[0] = var_ln;
+            ln_chain[1] = ')';
+            ln_chain[2] = '\0';
 
-        cout<<"1/"<<"("<<ln_chain;
+            cout<<"1/"<<"("<<ln_chain;
+            ans6 += "1/";
+            ans6 += "(";
+            for(int i=0; ln_chain[i]!='\0'; i++)
+                ans6 += ln_chain[i];
+        }
     }
 
     else if(trigon_tracker_ln==true || ln_tracker_ln==true) {
         if(trigon_tracker_ln==true)
-            if_trigonometry(ln_chain);
+            ans6 += if_trigonometry(ln_chain);
 
         else if(ln_tracker_ln==true)
-            if_ln(ln_chain);
+            ans6 += if_ln(ln_chain);
 
         cout<<"/"<<ln_chain;
+        ans6 += "/";
+        for(int i=0; ln_chain[i]!='\0'; i++)
+            ans6 += ln_chain[i];
     }
+
+    return ans6;
 //
 //    for(int i=0; i<strlen(ln_chain); i++)
 //s        cout<<ln_chain[i];

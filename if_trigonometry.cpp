@@ -150,7 +150,7 @@ string if_trigonometry(char input[100]) {
 
     else {
         if(var_trigon=='\0'){
-            ans5 = "";
+            ans5 = "0";
             return ans5;
         }
 

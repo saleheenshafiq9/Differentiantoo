@@ -21,7 +21,7 @@ void calculate(int,int,char);
 void displayhead();
 void clrscr();
 string if_trigonometry(char[]);
-void if_ln(char[]);
+string if_ln(char[]);
 bool function_trigonometry(char[]);
 bool function_ln(char[]);
 char *removeSpaces(char *);
