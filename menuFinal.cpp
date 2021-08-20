@@ -79,7 +79,7 @@ void menu(){
 ////            fans.push_back(input.c_string());
             cout<<"\n\t\t\t";
             for (int i = 0; i < fans.size(); ++i){
-                cout << fans[i] << '\n';
+                cout << fans[i] << "\n";
             }
 
 
