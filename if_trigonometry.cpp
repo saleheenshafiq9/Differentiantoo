@@ -157,9 +157,10 @@ string if_trigonometry(char input[100]) {
         }
 
         else {
-            trigonometry_chain[0] = var_trigon;
-            trigonometry_chain[1] = ')';
-            trigonometry_chain[2] = '\0';
+            trigonometry_chain[0] = '(';
+            trigonometry_chain[1] = var_trigon;
+            trigonometry_chain[2] = ')';
+            trigonometry_chain[3] = '\0';
         }
     }
 
