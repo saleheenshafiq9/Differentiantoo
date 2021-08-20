@@ -92,7 +92,12 @@ string differentiate(int coeff, char variable, int power, char sign) {
     if(new_power!=1 && new_power!=0){
         cout<<"^"<<new_power;
         ans2 += "^";
-        ans2 += num_to_str(new_power);
+        if(new_power<0){
+            ans2 += "-";
+            ans2 += num_to_str(abs(new_power));
+        }
+        else
+            ans2 += num_to_str(new_power);
     }
     universal_sign = sign;
     sign_remover++;

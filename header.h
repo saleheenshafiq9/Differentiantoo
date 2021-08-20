@@ -14,6 +14,7 @@
 
 using namespace std;
 
+void menu();
 string partition(char[]);
 string differentiate(int,char,int,char);
 void calculate(int,int,char);
