@@ -11,7 +11,7 @@ bool function_trigonometry(char input[100]) {
             countLn = i;
         else if(input[i]=='t' || input[i]=='s' || input[i]=='c')
             countTrig = i;
-        else if(input[i]=='r')
+        else if(input[i]=='s' && input[i+1]=='q')
             countRoot = i;
     }
 

@@ -6,7 +6,7 @@ int token_root = 0;
 
 bool function_root(char input[100]) {
 
-    char* if_root = strstr(input,"root");
+    char* if_root = strstr(input,"sqrt");
 
     if(if_root)
         return true;
@@ -59,7 +59,7 @@ string if_root(char input[100]) {
         ans7 += "(";
         ans7 += partition(root_chain);
 //        cout<<"/"<<ln_chain;
-        ans7 += "/2*root";
+        ans7 += "/2*sqrt";
         for(int i=0; root_chain[i]!='\0'; i++)
             ans7 += root_chain[i];
     }
@@ -76,7 +76,7 @@ string if_root(char input[100]) {
 
 //            cout<<"1/"<<"("<<ln_chain;
             ans7 += "1/";
-            ans7 += "2*root(";
+            ans7 += "2*sqrt(";
             for(int i=0; root_chain[i]!='\0'; i++)
                 ans7 += root_chain[i];
         }
@@ -90,7 +90,7 @@ string if_root(char input[100]) {
             ans7 += if_ln(root_chain);
 
 //        cout<<"/"<<ln_chain;
-        ans7 += "/2*root(";
+        ans7 += "/2*sqrt(";
         for(int i=0; root_chain[i]!='\0'; i++){
             if(root_chain[i]=='(' && i==0)
                 continue;
