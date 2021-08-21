@@ -29,6 +29,8 @@ string num_to_str(int);
 char* c_str(string);
 int find_char_type(char);
 void func_checker();
+bool function_root(char[]);
+string if_root(char[]);
 
 bool is_bracket(char);
 bool is_power(char);

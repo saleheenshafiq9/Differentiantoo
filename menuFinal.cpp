@@ -55,31 +55,7 @@ void menu3(){
 }
 
 void func_checker(){
-        bool trigonometry_tracker = function_trigonometry(input);
-        bool ln_tracker = function_ln(input);
 
-        if(trigonometry_tracker==true){
-            ans += if_trigonometry(input);
-            fans.push_back(ans);
-            ans = "";
-        }
-
-        else if(ln_tracker==true){
-            ans += if_ln(input);
-            fans.push_back(ans);
-            ans = "";
-        }
-
-        else {
-            if_algebric(input);
-        }
-//            cout<<"\n"<<fans[0]<<"\n";
-//            if_algebric(c_str(fans[0]));
-//            cout<<"\n"<<fans[1]<<"\n";
-////            fans.push_back(input.c_string());
-        for (int i = 0; i < fans.size(); ++i){
-            cout << fans[i] << "\n";
-        }
 }
 
 void menu(){
@@ -103,33 +79,38 @@ void menu(){
             cutSpace();
             cout<<"\n\n\t\tOutput :  ";
 
-            func_checker();
-//        cout<<input;
-//            bool trigonometry_tracker = function_trigonometry(input);
-//            bool ln_tracker = function_ln(input);
-//
-//            if(trigonometry_tracker==true){
-//                ans += if_trigonometry(input);
-//                fans.push_back(ans);
-//                ans = "";
-//            }
-//
-//            else if(ln_tracker==true){
-//                ans += if_ln(input);
-//                fans.push_back(ans);
-//                ans = "";
-//            }
-//
-//            else {
-//                if_algebric(input);
-//            }
-////            cout<<"\n"<<fans[0]<<"\n";
-////            if_algebric(c_str(fans[0]));
-////            cout<<"\n"<<fans[1]<<"\n";
-//////            fans.push_back(input.c_string());
-//            for (int i = 0; i < fans.size(); ++i){
-//                cout << fans[i] << "\n";
-//            }
+            bool trigonometry_tracker = function_trigonometry(input);
+        bool ln_tracker = function_ln(input);
+        bool root_tracker = function_root(input);
+
+        if(trigonometry_tracker==true){
+            ans += if_trigonometry(input);
+            fans.push_back(ans);
+            ans = "";
+        }
+
+        else if(ln_tracker==true){
+            ans += if_ln(input);
+            fans.push_back(ans);
+            ans = "";
+        }
+
+        else if(root_tracker==true){
+            ans += if_root(input);
+            fans.push_back(ans);
+            ans = "";
+        }
+
+        else {
+            if_algebric(input);
+        }
+//            cout<<"\n"<<fans[0]<<"\n";
+//            if_algebric(c_str(fans[0]));
+//            cout<<"\n"<<fans[1]<<"\n";
+////            fans.push_back(input.c_string());
+        for (int i = 0; i < fans.size(); ++i){
+            cout << fans[i] << "\n";
+        }
 
             menu3();
 
