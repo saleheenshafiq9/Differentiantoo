@@ -79,7 +79,7 @@ void menu(){
             cutSpace();
             cout<<"\n\n\t\tOutput :  ";
 
-            bool trigonometry_tracker = function_trigonometry(input);
+        bool trigonometry_tracker = function_trigonometry(input);
         bool ln_tracker = function_ln(input);
         bool root_tracker = function_root(input);
 
@@ -157,5 +157,4 @@ void menu(){
         }
         else if(n==4)
             exit(1);
-
 }
