@@ -31,7 +31,7 @@ void clrscr()
 
 void if_algebric(char input2[100]){
 
-    cout<<"(";
+//    cout<<"(";
     ans += "(";
     ans += partition(input2);
     fans.push_back(ans);
@@ -77,7 +77,6 @@ void menu(){
 //            if_algebric(c_str(fans[0]));
 //            cout<<"\n"<<fans[1]<<"\n";
 ////            fans.push_back(input.c_string());
-            cout<<"\n\t\t\t";
             for (int i = 0; i < fans.size(); ++i){
                 cout << fans[i] << "\n";
             }

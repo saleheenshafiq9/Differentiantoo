@@ -34,6 +34,8 @@ string if_ln(char input[100]) {
             }
 
             else {
+                ln_chain[j] = input[i];
+                j++;
                 ln_chain[j] = input[i+1];
                 j++;
             }
@@ -53,11 +55,11 @@ string if_ln(char input[100]) {
     bool ln_tracker_ln = function_ln(ln_chain);
 
     if(k!=1 && trigon_tracker_ln==false && ln_tracker_ln==false) {
-        cout<<"(";
+//        cout<<"(";
         ans6 += "(";
         ans6 += partition(ln_chain);
-        cout<<"/("<<ln_chain;
-        ans6 += "/(";
+//        cout<<"/"<<ln_chain;
+        ans6 += "/";
         for(int i=0; ln_chain[i]!='\0'; i++)
             ans6 += ln_chain[i];
     }
@@ -72,7 +74,7 @@ string if_ln(char input[100]) {
             ln_chain[1] = ')';
             ln_chain[2] = '\0';
 
-            cout<<"1/"<<"("<<ln_chain;
+//            cout<<"1/"<<"("<<ln_chain;
             ans6 += "1/";
             ans6 += "(";
             for(int i=0; ln_chain[i]!='\0'; i++)
@@ -87,10 +89,15 @@ string if_ln(char input[100]) {
         else if(ln_tracker_ln==true)
             ans6 += if_ln(ln_chain);
 
-        cout<<"/"<<ln_chain;
+//        cout<<"/"<<ln_chain;
         ans6 += "/";
-        for(int i=0; ln_chain[i]!='\0'; i++)
+        for(int i=0; ln_chain[i]!='\0'; i++){
+            if(ln_chain[i]=='(' && i==0)
+                continue;
+            if(ln_chain[i]=='(' && ln_chain[i+1]=='(')
+                continue;
             ans6 += ln_chain[i];
+        }
     }
 
     return ans6;

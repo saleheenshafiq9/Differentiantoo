@@ -107,7 +107,8 @@ string value_partition(char input[100], int tokens[100]) {
     power = 0;
     variable = '\0';
     sign = '\0';
-    cout<<")";
+//    cout<<")";
+//    cout<<ans3;
     ans3 += ")";
     return ans3;
 }

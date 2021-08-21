@@ -14,7 +14,7 @@ string differentiate(int coeff, char variable, int power, char sign) {
     }
 
     else if(coeff==1002){
-        cout<<"0";
+//        cout<<"0";
         ans2 += "0";
         return ans2;
     }
@@ -24,53 +24,53 @@ string differentiate(int coeff, char variable, int power, char sign) {
 
     if(universal_sign=='+' || universal_sign=='-') {
         if(new_coeff>0){
-            cout<<universal_sign;
+//            cout<<universal_sign;
             ans2 += universal_sign;
         }
         else if(new_coeff<0 && new_power!=0) {
             if(sign_remover==0){
                 sign_remover++;
                 if(universal_sign=='+'){
-                    cout<<"-";
+//                    cout<<"-";
                     ans2 += "-";
                 }
             }
             else {
                 if(universal_sign=='+'){
-                    cout<<"-";
+//                    cout<<"-";
                     ans2 += "-";
                 }
                 else if(new_power<0 && universal_sign=='-'){
-                    cout<<"+";
+//                    cout<<"+";
                     ans2 += "+";
                 }
                 else{
-                    cout<<"-";
+//                    cout<<"-";
                     ans2 += "-";
                 }
             }
         }
         else if(new_power==0 || new_power==1) {
-            cout<<universal_sign;
+//            cout<<universal_sign;
             ans2 += universal_sign;
         }
         if(new_coeff!=1 && new_coeff!=-1){
-            cout<<abs(new_coeff);
+//            cout<<abs(new_coeff);
             ans2 += num_to_str(abs(new_coeff));
         }
         if(new_coeff==1 && new_power==0){
-            cout<<new_coeff;
+//            cout<<new_coeff;
             ans2 += "1";
         }
         if(new_coeff==-1 && new_power==0){
-            cout<<abs(new_coeff);
+//            cout<<abs(new_coeff);
             ans2 += "1";
         }
     }
 
     else {
         if(new_coeff!=1){
-            cout<<new_coeff;
+//            cout<<new_coeff;
             if(new_coeff<0){
                 ans2 += "-";
                 ans2 += num_to_str(abs(new_coeff));
@@ -79,18 +79,18 @@ string differentiate(int coeff, char variable, int power, char sign) {
                 ans2 += num_to_str(new_coeff);
         }
         if(new_coeff==1 && new_power==0){
-            cout<<new_coeff;
+//            cout<<new_coeff;
             ans2 += "1";
         }
     }
 
     if(new_power!=0){
-        cout<<"*"<<variable;
+//        cout<<"*"<<variable;
         ans2 += "*";
         ans2 += variable;
     }
     if(new_power!=1 && new_power!=0){
-        cout<<"^"<<new_power;
+//        cout<<"^"<<new_power;
         ans2 += "^";
         if(new_power<0){
             ans2 += "-";
