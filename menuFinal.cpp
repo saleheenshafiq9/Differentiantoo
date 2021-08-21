@@ -86,8 +86,9 @@ void menu(){
     int n,l=50;
     displayhead();
     cout<<"\n\n\t\t\t\t--> INPUT AN EQUATION (Press '1')";
-    cout<<"\n\n\t\t\t\t--> USER MANUAL (Press '2')";
-    cout<<"\n\n\t\t\t\t--> EXIT (Press '3')\n";
+    cout<<"\n\n\t\t\t\t--> DERIVATIVE FORMULAS (Press '2')";
+    cout<<"\n\n\t\t\t\t--> USER MANUAL (Press '3')";
+    cout<<"\n\n\t\t\t\t--> EXIT (Press '4')\n";
     cin>>n;
 
 
@@ -137,9 +138,13 @@ void menu(){
         else if(n==2) {
             clrscr();
             displayhead();
-            cout<<"\n\n\t\t\t\t-->";
+            cout<<"\n\n\t\t\t\t--> 1) d/dx(c) = 0 where c is any constant.";
+            cout<<"\n\n\t\t\t\t--> 2) d/dx(x^n) = n*x^(n-1) is called the Power Rule of Derivatives.";
+            cout<<"\n\n\t\t\t\t--> 3) d/dx(x) = 1";
+
+            menu3();
         }
-        else if(n==3)
+        else if(n==4)
             exit(1);
 
 }
