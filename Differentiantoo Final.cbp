@@ -37,6 +37,7 @@
 		<Unit filename="displayhead.cpp" />
 		<Unit filename="header.h" />
 		<Unit filename="if_ln.cpp" />
+		<Unit filename="if_root.cpp" />
 		<Unit filename="if_trigonometry.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menuFinal.cpp" />

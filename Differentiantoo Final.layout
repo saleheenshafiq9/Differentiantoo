@@ -2,34 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="if_ln.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2230" topLine="73" />
-		</Cursor>
-	</File>
-	<File name="differentiate.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2363" topLine="67" />
-		</Cursor>
-	</File>
-	<File name="calculate.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="47" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="header.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="670" topLine="11" />
+			<Cursor1 position="715" topLine="11" />
 		</Cursor>
 	</File>
-	<File name="partition.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="menuFinal.cpp" open="1" top="1" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2897" topLine="96" />
-		</Cursor>
-	</File>
-	<File name="if_trigonometry.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5150" topLine="176" />
+			<Cursor1 position="1508" topLine="62" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
@@ -37,19 +17,44 @@
 			<Cursor1 position="75" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="displayhead.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="43" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="stringconv.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="566" topLine="24" />
 		</Cursor>
 	</File>
-	<File name="menuFinal.cpp" open="1" top="1" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="if_trigonometry.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3515" topLine="125" />
+			<Cursor1 position="393" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="displayhead.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="if_ln.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="43" topLine="0" />
+			<Cursor1 position="2463" topLine="82" />
+		</Cursor>
+	</File>
+	<File name="partition.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2897" topLine="96" />
+		</Cursor>
+	</File>
+	<File name="differentiate.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2363" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="if_root.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="149" topLine="84" />
+		</Cursor>
+	</File>
+	<File name="calculate.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="47" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
