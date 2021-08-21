@@ -90,7 +90,7 @@ string if_root(char input[100]) {
             ans7 += if_ln(root_chain);
 
 //        cout<<"/"<<ln_chain;
-        ans7 += "/2*root";
+        ans7 += "/2*root(";
         for(int i=0; root_chain[i]!='\0'; i++){
             if(root_chain[i]=='(' && i==0)
                 continue;
@@ -98,6 +98,7 @@ string if_root(char input[100]) {
                 continue;
             ans7 += root_chain[i];
         }
+        ans7 += ")";
     }
 
     return ans7;

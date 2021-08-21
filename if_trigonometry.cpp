@@ -5,15 +5,20 @@ using namespace std;
 int token_trigo = 0;
 bool function_trigonometry(char input[100]) {
 
-    int countTrig, countLn;
+    int countTrig, countLn, countRoot;
     for(int i=0; i<strlen(input); i++){
         if(input[i]=='l')
             countLn = i;
         else if(input[i]=='t' || input[i]=='s' || input[i]=='c')
             countTrig = i;
+        else if(input[i]=='r')
+            countRoot = i;
     }
 
     if(countLn<countTrig)
+        return false;
+
+    if(countRoot<countTrig)
         return false;
 
     for(int i=0; i<strlen(input); i++){
