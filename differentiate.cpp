@@ -106,6 +106,8 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //        universal_sign = '\0';
 //        cout<<"check";
 //    }
-
+    for(int i=0; i<ans2.size(); i++)
+//        cout<<ans2[i]<<"\t";
+    return ans2;
 }
 

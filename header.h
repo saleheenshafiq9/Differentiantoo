@@ -31,6 +31,8 @@ int find_char_type(char);
 void func_checker();
 bool function_root(char[]);
 string if_root(char[]);
+string if_uv(char[]);
+bool function_uv(char[]);
 
 bool is_bracket(char);
 bool is_power(char);

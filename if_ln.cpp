@@ -23,6 +23,8 @@ string if_ln(char input[100]) {
 
     for(int i=0; i<strlen(input); i++) {
 
+        if(input[i]=='(' && i==0)
+                continue;
         if(input[i]=='(') {
             if(input[i+2]==')' && input[i+3]==')'){
                 k=1;

@@ -36,6 +36,7 @@ void if_algebric(char input2[100]){
     ans += partition(input2);
     fans.push_back(ans);
 }
+
 void menu3(){
     int p;
     cout<<"\n\n";
@@ -79,31 +80,42 @@ void menu(){
             cutSpace();
             cout<<"\n\n\t\tOutput :  ";
 
-        bool trigonometry_tracker = function_trigonometry(input);
-        bool ln_tracker = function_ln(input);
-        bool root_tracker = function_root(input);
+        bool uv_tracker = function_uv(input);
 
-        if(trigonometry_tracker==true){
-            ans += if_trigonometry(input);
-            fans.push_back(ans);
-            ans = "";
-        }
-
-        else if(ln_tracker==true){
-            ans += if_ln(input);
-            fans.push_back(ans);
-            ans = "";
-        }
-
-        else if(root_tracker==true){
-            ans += if_root(input);
+        if(uv_tracker==true){
+            ans += if_uv(input);
             fans.push_back(ans);
             ans = "";
         }
 
         else {
-            if_algebric(input);
+            bool trigonometry_tracker = function_trigonometry(input);
+            bool ln_tracker = function_ln(input);
+            bool root_tracker = function_root(input);
+
+            if(trigonometry_tracker==true){
+                ans += if_trigonometry(input);
+                fans.push_back(ans);
+                ans = "";
+            }
+
+            else if(ln_tracker==true){
+                ans += if_ln(input);
+                fans.push_back(ans);
+                ans = "";
+            }
+
+            else if(root_tracker==true){
+                ans += if_root(input);
+                fans.push_back(ans);
+                ans = "";
+            }
+
+            else {
+                if_algebric(input);
+            }
         }
+
 //            cout<<"\n"<<fans[0]<<"\n";
 //            if_algebric(c_str(fans[0]));
 //            cout<<"\n"<<fans[1]<<"\n";
