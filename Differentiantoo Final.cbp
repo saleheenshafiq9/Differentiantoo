@@ -35,6 +35,7 @@
 		<Unit filename="calculate.cpp" />
 		<Unit filename="differentiate.cpp" />
 		<Unit filename="displayhead.cpp" />
+		<Unit filename="graphicMenu.cpp" />
 		<Unit filename="header.h" />
 		<Unit filename="if_ln.cpp" />
 		<Unit filename="if_root.cpp" />
@@ -43,6 +44,7 @@
 		<Unit filename="menuFinal.cpp" />
 		<Unit filename="partition.cpp" />
 		<Unit filename="stringconv.cpp" />
+		<Unit filename="uv.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
