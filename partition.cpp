@@ -65,13 +65,15 @@ string value_partition(char input[100], int tokens[100]) {
                 coeff = coeff*(-1);
             }
             if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='+' || input[i+1]=='-') && input[i-2]!='^')
-                coeff = 1001;
+                coeff = 1005;
             else if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='(' || input[i+1]==')') && input[i-2]!='^')
                 coeff = 1001;
             else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='+' || input[i+1]=='-'))
                 coeff = 1001;
             else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='(' || input[i+1]==')'))
                 coeff = 1002;
+            else if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='(' || input[i+1]==')'))
+                coeff = 1004;
        }
         else if(tokens[i]==3) {
             if(input[i-1]=='(')

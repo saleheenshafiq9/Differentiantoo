@@ -26,7 +26,7 @@ string if_ln(char input[100]) {
         if(input[i]=='(' && i==0)
                 continue;
         if(input[i]=='(') {
-            if(input[i+2]==')' && input[i+3]==')'){
+            if(input[i+2]==')'){
                 k=1;
                 int i_type = find_char_type(input[i+1]);
                 if(i_type==1)

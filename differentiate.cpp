@@ -13,6 +13,9 @@ string differentiate(int coeff, char variable, int power, char sign) {
         return ans2;
     }
 
+    if(coeff==1005)
+        return "";
+
     else if(coeff==1002){
 //        cout<<"0";
         ans2 += "0";

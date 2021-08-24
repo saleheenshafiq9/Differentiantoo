@@ -16,8 +16,12 @@ bool function_uv(char input[100]){
 string if_uv(char input[100]) {
 
     string ans8 = "";
+    string ddx_f = "", ddx_s = "";
     char first_uv[50], second_uv[50];
     int find_delimit=0, j=0, k=0;
+
+    cout<<"\n\n\t\t"<<"This expression follows the UV method as it's a product of two functions."<<"\n\n\t\tAs we know-"
+    <<"\n\n\t\t\t"<<"d/dx(u*v) = u*d/dx(v) + v*d/dx(u)"<<"\n\n\t\t"<<"Here-\n\n\t\t\t";
 
     for(int i=0; i<strlen(input); i++){
 
@@ -40,8 +44,8 @@ string if_uv(char input[100]) {
     first_uv[k] = '\0';
     second_uv[j] = '\0';
 
-//    cout<<first_uv<<"\n";
-//    cout<<second_uv;
+    cout<<"u = "<<first_uv<<"\n\n\t\t\t";
+    cout<<"v = "<<second_uv<<"\n\n\t\t";
 
     bool trigonometry_tracker2 = function_trigonometry(second_uv);
     bool ln_tracker2 = function_ln(second_uv);
@@ -50,26 +54,32 @@ string if_uv(char input[100]) {
     if(trigonometry_tracker2==true){
         ans8 += first_uv;
         ans8 += "*";
-        ans8 += if_trigonometry(second_uv);
+        string s = if_trigonometry(second_uv);
+        ans8 += s;
+        ddx_s += s;
     }
 
     else if(ln_tracker2==true){
         ans8 += first_uv;
         ans8 += "*";
         ans8 += if_ln(second_uv);
+        ddx_s += if_ln(second_uv);
     }
 
     else if(root_tracker2==true){
         ans8 += first_uv;
         ans8 += "*";
         ans8 += if_root(second_uv);
+        ddx_s += if_root(second_uv);
     }
 
     else {
         ans8 += first_uv;
         ans8 += "*";
-        ans8 += "(";
-        ans8 += partition(second_uv);
+        string s3 = "(";
+        s3 += partition(second_uv);
+        ans8 += s3;
+        ddx_s += s3;
     }
 
     ans8 += "+";
@@ -81,28 +91,46 @@ string if_uv(char input[100]) {
     if(trigonometry_tracker3==true){
         ans8 += second_uv;
         ans8 += "*";
-        ans8 += if_trigonometry(first_uv);
+        string s1 = if_trigonometry(first_uv);
+        ans8 += s1;
+        ddx_f += s1;
     }
 
     else if(ln_tracker3==true){
         ans8 += second_uv;
         ans8 += "*";
         ans8 += if_ln(first_uv);
+        ddx_f += if_ln(first_uv);
     }
 
     else if(root_tracker3==true){
         ans8 += second_uv;
         ans8 += "*";
         ans8 += if_root(first_uv);
+        ddx_f += if_root(first_uv);
     }
 
     else {
         ans8 += second_uv;
         ans8 += "*";
-        ans8 += "(";
-        ans8 += partition(first_uv);
+        string s2 = "(";
+        s2 += partition(first_uv);
+        ans8 += s2;
+        ddx_f += s2;
     }
+    cout<<"d/dx(u) = d/dx "<<first_uv<<"\n\n\t\t\t= ";
 
+    for(int i=0; i<ddx_f.size(); i++)
+        cout<<ddx_f[i];
+
+    cout<<"\n\n\t\t"<<"d/dx(v) = d/dx "<<second_uv<<"\n\n\t\t\t= ";
+
+    for(int i=0; i<ddx_s.size(); i++)
+        cout<<ddx_s[i];
+
+    cout<<"\n\n\t\tSo-\n\n\t\t\td/dx(u*v) = u*d/dx(v)+v*d/dx(u)\n\n\t\t\t\t= ";
+    ddx_f = "";
+    ddx_s = "";
     return ans8;
 }
 

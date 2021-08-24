@@ -33,6 +33,7 @@ bool function_root(char[]);
 string if_root(char[]);
 string if_uv(char[]);
 bool function_uv(char[]);
+#define Debug(x)  cout<< #x<< ": "<< x<< '\n';
 
 bool is_bracket(char);
 bool is_power(char);

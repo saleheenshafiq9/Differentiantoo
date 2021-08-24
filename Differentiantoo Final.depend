@@ -41,7 +41,7 @@
 1629453888 source:c:\users\saleheen shafiq\documents\github\differentiantoo\calculate.cpp
 	"header.h"
 
-1629739758 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
+1629790191 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
 	<iostream>
 	<string.h>
 	<sstream>
@@ -56,7 +56,7 @@
 	<bits/stdc++.h>
 	<math.h>
 
-1629735641 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
+1629791102 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
 	"header.h"
 
 1613561280 source:c:\users\saleheen shafiq\documents\github\differentiantoo\displayhead.cpp
@@ -68,13 +68,13 @@
 1629469803 source:c:\users\saleheen shafiq\documents\github\differentiantoo\main.cpp
 	"header.h"
 
-1629731902 source:c:\users\saleheen shafiq\documents\github\differentiantoo\partition.cpp
+1629791005 source:c:\users\saleheen shafiq\documents\github\differentiantoo\partition.cpp
 	"header.h"
 
 1629480511 source:c:\users\saleheen shafiq\documents\github\differentiantoo\stringconv.cpp
 	"header.h"
 
-1629736911 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_ln.cpp
+1629788977 source:c:\users\saleheen shafiq\documents\github\differentiantoo\if_ln.cpp
 	"header.h"
 
 1629446746 c:\users\saleheen shafiq\documents\github\differentiantoo\vh.h
@@ -88,6 +88,6 @@
 1629731733 source:c:\users\saleheen shafiq\documents\github\differentiantoo\graphicmenu.cpp
 	"header.h"
 
-1629741865 source:c:\users\saleheen shafiq\documents\github\differentiantoo\uv.cpp
+1629791782 source:c:\users\saleheen shafiq\documents\github\differentiantoo\uv.cpp
 	"header.h"
 
