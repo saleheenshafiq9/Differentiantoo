@@ -14,6 +14,10 @@ void all_algebraic(){
     all_a++;
 }
 
+void algebraic_null(){
+    all_a = 0;
+}
+
 string differentiate(int coeff, char variable, int power, char sign) {
 //
 //    Debug(all_a);

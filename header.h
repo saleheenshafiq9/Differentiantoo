@@ -46,3 +46,5 @@ bool is_alphabte(int);
 void null_universe();
 void all_algebraic();
 void all_partition();
+void algebraic_null();
+void partition_null();

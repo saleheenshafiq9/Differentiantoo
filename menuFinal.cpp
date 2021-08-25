@@ -84,6 +84,9 @@ void menu(){
             cutSpace();
             cout<<"\n\n\t\tAnswer :  ";
 
+        partition_null();
+        algebraic_null();
+
         bool uv_tracker = function_uv(input);
         bool ubyv_tracker = function_ubyv(input);
 

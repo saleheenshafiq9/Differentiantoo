@@ -48,6 +48,10 @@ void all_partition(){
     all_p++;
 }
 
+void partition_null(){
+    all_p = 0;
+}
+
 string value_partition(char input[100], int tokens[100]) {
     int power=1, coeff=1;
     char variable, sign='\0';
