@@ -166,6 +166,7 @@ string if_trigonometry(char input[100]) {
     if(k!=1) {
 //        cout<<"(";
         ans5 += "(";
+//        Debug(trigonometry_chain);
         ans5 += partition(trigonometry_chain);
 //        cout<<"*";
         ans5 += "*";

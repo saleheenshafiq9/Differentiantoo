@@ -56,8 +56,6 @@ string if_uv(char input[100]) {
 
         if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4)
             ans8 += "-";
-        else
-            ans8 += "+";
     }
 
     if(trigonometry_tracker2==true){
@@ -108,7 +106,8 @@ string if_uv(char input[100]) {
             ans8 += "+";
     }
 
-    ans8 += "+";
+    else
+        ans8 += "+";
 
     if(trigonometry_tracker3==true){
         ans8 += second_uv;

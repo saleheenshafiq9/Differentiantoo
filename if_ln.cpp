@@ -48,13 +48,17 @@ string if_ln(char input[100]) {
             j++;
         }
 
-        if(input[i]==')') {
+        if(input[i]==')' && input[i-2]!='(') {
             ln_chain[j] = '\0';
         }
     }
-
+//    Debug(ln_chain);
     bool trigon_tracker_ln = function_trigonometry(ln_chain);
     bool ln_tracker_ln = function_ln(ln_chain);
+
+//    if(k==1 && trigon_tracker_ln==true){
+//        Debug(ln_chain);
+//    }
 
     if(k!=1 && trigon_tracker_ln==false && ln_tracker_ln==false) {
 //        cout<<"(";
@@ -85,8 +89,18 @@ string if_ln(char input[100]) {
     }
 
     else if(trigon_tracker_ln==true || ln_tracker_ln==true) {
-        if(trigon_tracker_ln==true)
+        if(trigon_tracker_ln==true){
+            if(k==1){
+                for(int i=0; i<strlen(ln_chain); i++){
+                    if(ln_chain[i]=='(' && ln_chain[i+1]==')'){
+                        ln_chain[i+1] = var_ln;
+                        ln_chain[i+2] = ')';
+                        ln_chain[i+3] = '\0';
+                    }
+                }
+            }
             ans6 += if_trigonometry(ln_chain);
+        }
 
         else if(ln_tracker_ln==true)
             ans6 += if_ln(ln_chain);

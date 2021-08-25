@@ -110,7 +110,8 @@ string if_ubyv(char input[100]) {
             ans9 += "-";
     }
 
-    ans9 += "-";
+    else
+        ans9 += "-";
 
     if(trigonometry_tracker4==true){
         ans9 += first_uv1;
