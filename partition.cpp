@@ -71,12 +71,18 @@ string value_partition(char input[100], int tokens[100]) {
             }
             if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='+' || input[i+1]=='-') && input[i-2]!='^')
                 coeff = 1005;
-            else if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='(' || input[i+1]==')') && input[i-2]!='^')
+            else if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='(' || input[i+1]==')') && input[i-2]!='^'){
+                coeff = 1011;
+                variable = input[i];
+            }
+            else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='+' || input[i+1]=='-')){
                 coeff = 1001;
-            else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='+' || input[i+1]=='-'))
-                coeff = 1001;
-            else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='(' || input[i+1]==')'))
+                variable = input[i];
+            }
+            else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='(' || input[i+1]==')')){
                 coeff = 1002;
+                variable = input[i];
+            }
        }
         else if(tokens[i]==3) {
             if(input[i-1]=='(')
@@ -102,6 +108,10 @@ string value_partition(char input[100], int tokens[100]) {
 //            if(input[i]==')')
 //                sign = 'f';
             ans3 += differentiate(coeff, variable, power, sign);
+
+            if(all_p>0 && coeff!=1001)
+                cout<<")";
+
             sign = '\0';
             coeff = 1;
             power = 1;
@@ -117,7 +127,7 @@ string value_partition(char input[100], int tokens[100]) {
 //    cout<<ans3;
     ans3 += ")";
     if(all_p>0)
-        cout<<")\n\n\t\t\t= ";
+        cout<<"\n\n\t\t\t= ";
     return ans3;
 }
 
