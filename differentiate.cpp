@@ -5,6 +5,10 @@ char derivative[100];
 char universal_sign = '\0';
 int sign_remover = 0;
 
+void null_universe(){
+    universal_sign = '\0';
+}
+
 string differentiate(int coeff, char variable, int power, char sign) {
 
     string ans2 = "";
@@ -109,7 +113,7 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //        universal_sign = '\0';
 //        cout<<"check";
 //    }
-    for(int i=0; i<ans2.size(); i++)
+//    for(int i=0; i<ans2.size(); i++)
 //        cout<<ans2[i]<<"\t";
     return ans2;
 }

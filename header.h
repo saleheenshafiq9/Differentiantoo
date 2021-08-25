@@ -43,3 +43,4 @@ bool is_power(char);
 bool is_operator(char);
 bool is_digit(int);
 bool is_alphabte(int);
+void null_universe();
