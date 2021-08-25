@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int token_trigo = 0;
+int token_trigo = 0, k5=0;
 bool function_trigonometry(char input[100]) {
 
-    int countTrig, countLn, countRoot;
+    int countTrig, countLn=50, countRoot=50;
     for(int i=0; i<strlen(input); i++){
         if(input[i]=='l')
             countLn = i;
@@ -14,6 +14,9 @@ bool function_trigonometry(char input[100]) {
         else if(input[i]=='s' && input[i+1]=='q')
             countRoot = i;
     }
+
+//    Debug(countLn);
+//    Debug(countTrig);
 
     if(countLn<countTrig)
         return false;
@@ -28,7 +31,7 @@ bool function_trigonometry(char input[100]) {
             return true;
         }
 
-        else if(input[i]=='c' && input[i+2]!='t' && input[i+3]!='e'){
+        else if(input[i]=='c' && input[i+2]=='s' && input[i+3]!='e'){
             token_trigo = 1;
             return true;
         }
@@ -101,6 +104,11 @@ bool function_trigonometry(char input[100]) {
         return false;
 }
 
+int trigon_sign(){
+    k5++;
+    return token_trigo;
+}
+
 string if_trigonometry(char input[100]) {
 
 //    char* if_cos, if_sin, if_tan, if_cot, if_sec, if_cosec;
@@ -114,9 +122,9 @@ string if_trigonometry(char input[100]) {
     for(int i=0; i<strlen(input); i++) {
 
         if(input[i]=='(' && i==0)
-                continue;
-            if(input[i]=='(' && input[i+1]=='(')
-                continue;
+            continue;
+        if(input[i]=='(' && input[i+1]=='(')
+            continue;
 
         if(input[i]=='(' && i!=0) {
             if(input[i+2]==')' && input[i+1]!='('){
@@ -135,10 +143,12 @@ string if_trigonometry(char input[100]) {
                 j++;
             }
         }
+
         else if(j>0) {
             trigonometry_chain[j] = input[i+1];
             j++;
         }
+
         if(input[i]==')') {
             trigonometry_chain[j] = '\0';
         }
@@ -149,7 +159,8 @@ string if_trigonometry(char input[100]) {
 
     if(token_trigo==1 || token_trigo==6 || token_trigo==4){
 //        cout<<"-";
-        ans5 += "-";
+        if(k5==0)
+            ans5 += "-";
     }
 
     if(k!=1) {
@@ -172,6 +183,7 @@ string if_trigonometry(char input[100]) {
             trigonometry_chain[2] = ')';
             trigonometry_chain[3] = '\0';
         }
+//        Debug(trigonometry_chain);
     }
 
     if(token_trigo==1){
@@ -225,6 +237,7 @@ string if_trigonometry(char input[100]) {
     }
 
     token_trigo = 0;
+    k5 = 0;
     return ans5;
 
 }

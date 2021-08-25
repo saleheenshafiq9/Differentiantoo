@@ -18,7 +18,7 @@ string if_uv(char input[100]) {
     string ans8 = "";
     string ddx_f = "", ddx_s = "";
     char first_uv[50], second_uv[50];
-    int find_delimit=0, j=0, k=0;
+    int find_delimit=0, j=0, k=0, sign_comp1, sing_comp1;
 
     cout<<"\n\n\t\t"<<"This expression follows the UV method as it's a product of two functions."<<"\n\n\t\tAs we know-"
     <<"\n\n\t\t\t"<<"d/dx(u*v) = u*d/dx(v) + v*d/dx(u)"<<"\n\n\t\t"<<"Here-\n\n\t\t\t";
@@ -45,15 +45,28 @@ string if_uv(char input[100]) {
     second_uv[j] = '\0';
 
     cout<<"u = "<<first_uv<<"\n\n\t\t\t";
-    cout<<"v = "<<second_uv<<"\n\n\t\t";
+    cout<<"v = "<<second_uv<<"\n\n\t\t\n\t\t";
 
     bool trigonometry_tracker2 = function_trigonometry(second_uv);
     bool ln_tracker2 = function_ln(second_uv);
     bool root_tracker2 = function_root(second_uv);
 
     if(trigonometry_tracker2==true){
+        sing_comp1 = trigon_sign();
+
+        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4)
+            ans8 += "-";
+        else
+            ans8 += "+";
+    }
+
+    if(trigonometry_tracker2==true){
         ans8 += first_uv;
         ans8 += "*";
+
+        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4)
+            ddx_s += "-";
+
         string s = if_trigonometry(second_uv);
         ans8 += s;
         ddx_s += s;
@@ -82,15 +95,28 @@ string if_uv(char input[100]) {
         ddx_s += s3;
     }
 
-    ans8 += "+";
-
     bool trigonometry_tracker3 = function_trigonometry(first_uv);
     bool ln_tracker3 = function_ln(first_uv);
     bool root_tracker3 = function_root(first_uv);
 
     if(trigonometry_tracker3==true){
+        sign_comp1 = trigon_sign();
+
+        if(sign_comp1==1 || sign_comp1==6 || sign_comp1==4)
+            ans8 += "-";
+        else
+            ans8 += "+";
+    }
+
+    ans8 += "+";
+
+    if(trigonometry_tracker3==true){
         ans8 += second_uv;
         ans8 += "*";
+
+        if(sign_comp1==1 || sign_comp1==6 || sign_comp1==4)
+            ddx_f += "-";
+
         string s1 = if_trigonometry(first_uv);
         ans8 += s1;
         ddx_f += s1;
@@ -128,7 +154,7 @@ string if_uv(char input[100]) {
     for(int i=0; i<ddx_s.size(); i++)
         cout<<ddx_s[i];
 
-    cout<<"\n\n\t\tSo-\n\n\t\t\td/dx(u*v) = u*d/dx(v)+v*d/dx(u)\n\n\t\t\t\t= ";
+    cout<<"\n\n\t\tSo-\n\n\t\t\td/dx(u*v) = u*d/dx(v)+v*d/dx(u)\n\n\t\t\t\t  = ";
     ddx_f = "";
     ddx_s = "";
     return ans8;

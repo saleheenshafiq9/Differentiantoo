@@ -81,9 +81,16 @@ void menu(){
             cout<<"\n\n\t\tOutput :  ";
 
         bool uv_tracker = function_uv(input);
+        bool ubyv_tracker = function_ubyv(input);
 
         if(uv_tracker==true){
             ans += if_uv(input);
+            fans.push_back(ans);
+            ans = "";
+        }
+
+        else if(ubyv_tracker==true){
+            ans += if_ubyv(input);
             fans.push_back(ans);
             ans = "";
         }
@@ -137,32 +144,33 @@ void menu(){
             cout<<"\n\n\t\t\t--> 3) d/dx(x) = 1";
             cout<<"\n\n\t\t\t--> 4) d/dx(u+v) = d/dx(u) + d/dx(v) ; u and v are two functions consist of variable 'x'.";
             cout<<"\n\n\t\t\t--> 5) d/dx(u*v) = u*d/dx(v) + v*d/dx(u) ; u and v are two functions consist of variable 'x'.";
-            cout<<"\n\n\t\t\t--> 6) d/dx(sqrt(x)) = 1/2*sqrt(x)";
+            cout<<"\n\n\t\t\t--> 6) d/dx(u/v) = [v*d/dx(u) - u*d/dx(v)]/v^2 ; u and v are two functions consist of variable 'x'.";
+            cout<<"\n\n\t\t\t--> 7) d/dx(sqrt(x)) = 1/2*sqrt(x)";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF LOGARITHMIC FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 7) d/dx(ln(x)) = 1/x";
-            cout<<"\n\n\t\t\t--> 8) d/dx(ln(u)) = d/dx(u)/u ; u is a function consists of variable 'x'.";
+            cout<<"\n\n\t\t\t--> 8) d/dx(ln(x)) = 1/x";
+            cout<<"\n\n\t\t\t--> 9) d/dx(ln(u)) = d/dx(u)/u ; u is a function consists of variable 'x'.";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF TRIGONOMETRIC FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 9) d/dx(sin(x)) = cos(x)";
-            cout<<"\n\n\t\t\t--> 10) d/dx(cos(x)) = -sin(x)";
-            cout<<"\n\n\t\t\t--> 11) d/dx(tan(x)) = sec^2(x)";
-            cout<<"\n\n\t\t\t--> 12) d/dx(sec(x)) = sec(x)*tan(x)";
-            cout<<"\n\n\t\t\t--> 13) d/dx(cot(x)) = -cosec^2(x)";
-            cout<<"\n\n\t\t\t--> 14) d/dx(cosec(x)) = -cosec(x)*cot(x)";
+            cout<<"\n\n\t\t\t--> 10) d/dx(sin(x)) = cos(x)";
+            cout<<"\n\n\t\t\t--> 11) d/dx(cos(x)) = -sin(x)";
+            cout<<"\n\n\t\t\t--> 12) d/dx(tan(x)) = sec^2(x)";
+            cout<<"\n\n\t\t\t--> 13) d/dx(sec(x)) = sec(x)*tan(x)";
+            cout<<"\n\n\t\t\t--> 14) d/dx(cot(x)) = -cosec^2(x)";
+            cout<<"\n\n\t\t\t--> 15) d/dx(cosec(x)) = -cosec(x)*cot(x)";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF HYPERBOLIC FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 15) d/dx(sinh(x)) = cosh(x)";
-            cout<<"\n\n\t\t\t--> 16) d/dx(cosh(x)) = sinh(x)";
-            cout<<"\n\n\t\t\t--> 17) d/dx(tanh(x)) = sech^2(x)";
-            cout<<"\n\n\t\t\t--> 18) d/dx(sech(x)) = -sech(x)*tanh(x)";
-            cout<<"\n\n\t\t\t--> 19) d/dx(coth(x)) = -cosech^2(x)";
-            cout<<"\n\n\t\t\t--> 20) d/dx(cosech(x)) = -cosech(x)*coth(x)";
+            cout<<"\n\n\t\t\t--> 16) d/dx(sinh(x)) = cosh(x)";
+            cout<<"\n\n\t\t\t--> 17) d/dx(cosh(x)) = sinh(x)";
+            cout<<"\n\n\t\t\t--> 18) d/dx(tanh(x)) = sech^2(x)";
+            cout<<"\n\n\t\t\t--> 19) d/dx(sech(x)) = -sech(x)*tanh(x)";
+            cout<<"\n\n\t\t\t--> 20) d/dx(coth(x)) = -cosech^2(x)";
+            cout<<"\n\n\t\t\t--> 21) d/dx(cosech(x)) = -cosech(x)*coth(x)";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF EXPONENTIAL FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 21) d/dx(e^x) = e^x";
-            cout<<"\n\n\t\t\t--> 22) d/dx(x^x) = x^x*(1+ln(x))";
-            cout<<"\n\n\t\t\t--> 23) d/dx(a^x) = a^x*ln(a)";
+            cout<<"\n\n\t\t\t--> 22) d/dx(e^x) = e^x";
+            cout<<"\n\n\t\t\t--> 23) d/dx(x^x) = x^x*(1+ln(x))";
+            cout<<"\n\n\t\t\t--> 24) d/dx(a^x) = a^x*ln(a)";
 
 
             menu3();
