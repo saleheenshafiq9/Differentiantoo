@@ -44,6 +44,7 @@
 		<Unit filename="menuFinal.cpp" />
 		<Unit filename="partition.cpp" />
 		<Unit filename="stringconv.cpp" />
+		<Unit filename="ubyv.cpp" />
 		<Unit filename="uv.cpp" />
 		<Extensions>
 			<code_completion />
