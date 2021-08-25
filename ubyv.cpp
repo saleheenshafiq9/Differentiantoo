@@ -162,7 +162,15 @@ string if_ubyv(char input[100]) {
     cout<<"\n\n\t\tSo-\n\n\t\t\td/d/dx(u/v) = [v*d/dx(u)-u*d/dx(v)]/v^2\n\n\t\t\t\t    = ";
 
     ans9 += "]/";
+
+    if(trigonometry_tracker4==true || ln_tracker4==true || root_tracker4==true)
+        ans9 += "[";
+
     ans9 += second_uv1;
+
+    if(trigonometry_tracker4==true || ln_tracker4==true || root_tracker4==true)
+        ans9 += "]";
+
     ans9 += "^2";
     ddx_f1 = "";
     ddx_s1 = "";
