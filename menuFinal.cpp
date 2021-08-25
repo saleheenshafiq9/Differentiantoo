@@ -32,7 +32,11 @@ void clrscr()
 void if_algebric(char input2[100]){
 
 //    cout<<"(";
+    cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
+    cout<<"  "<<input2<<"\n\n\t\t\t= (";
     ans += "(";
+    all_algebraic();
+    all_partition();
     ans += partition(input2);
     fans.push_back(ans);
 }
@@ -78,7 +82,7 @@ void menu(){
             displayhead();
             cout<<"\t\tInput :  ";
             cutSpace();
-            cout<<"\n\n\t\tOutput :  ";
+            cout<<"\n\n\t\tAnswer :  ";
 
         bool uv_tracker = function_uv(input);
         bool ubyv_tracker = function_ubyv(input);

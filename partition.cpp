@@ -2,6 +2,8 @@
 
 using namespace std;
 
+int all_p = 0;
+
 bool is_alphabte(int str)
 {
     if((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z'))
@@ -42,6 +44,9 @@ bool is_bracket(char c)
         return false;
 }
 
+void all_partition(){
+    all_p++;
+}
 
 string value_partition(char input[100], int tokens[100]) {
     int power=1, coeff=1;
@@ -72,8 +77,6 @@ string value_partition(char input[100], int tokens[100]) {
                 coeff = 1001;
             else if((input[i-1]=='(' || input[i-1]==')') && (input[i+1]=='(' || input[i+1]==')'))
                 coeff = 1002;
-            else if((input[i-1]=='+' || input[i-1]=='-') && (input[i+1]=='(' || input[i+1]==')'))
-                coeff = 1004;
        }
         else if(tokens[i]==3) {
             if(input[i-1]=='(')
@@ -113,6 +116,8 @@ string value_partition(char input[100], int tokens[100]) {
 //    cout<<")";
 //    cout<<ans3;
     ans3 += ")";
+    if(all_p>0)
+        cout<<")\n\n\t\t\t= ";
     return ans3;
 }
 

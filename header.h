@@ -44,3 +44,5 @@ bool is_operator(char);
 bool is_digit(int);
 bool is_alphabte(int);
 void null_universe();
+void all_algebraic();
+void all_partition();
