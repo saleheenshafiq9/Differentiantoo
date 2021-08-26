@@ -74,6 +74,44 @@ int as_we_know_type(char input[100]){
     return as_we_k;
 }
 
+void uplusv(char input[100], char vvar){
+    int x13=0;
+    char s13='\0';
+    string temp_input = "";
+    for(int i=0; i<strlen(input); i++){
+        x13 = find_char_type(input[i]);
+        if(x13==3){
+            if(input[i-1]=='(')
+                continue;
+            else if(input[i]=='*'){
+                temp_input += input[i];
+                continue;
+            }
+            else if(input[i-1]!='^')
+                s13 = input[i];
+            else {
+                temp_input += input[i];
+                continue;
+            }
+        }
+        if(input[i]=='(')
+            continue;
+        if(s13=='\0')
+            temp_input += input[i];
+
+        if(s13=='+' || s13=='-' || input[i]==')'){
+            cout<<"d/d"<<vvar<<"(";
+            if(input[i]==')')
+                cout<<temp_input;
+            else
+                cout<<temp_input<<") "<<s13<<" ";
+            temp_input = "";
+        }
+         s13 = '\0';
+    }
+    cout<<"\n\n\t\t\t    = ";
+}
+
 string value_partition(char input[100], int tokens[100]) {
     int power=1, coeff=1;
     char variable, sign='\0';

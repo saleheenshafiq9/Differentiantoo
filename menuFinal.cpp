@@ -64,7 +64,11 @@ void if_algebric(char input2[100]){
     else
         cout<<c11;
 
-    cout<<"(f) = d/d"<<c11<<input2<<"\n\n\t\t\t    = (";
+    cout<<"(f) = d/d"<<c11<<input2<<"\n\n\t\t\t    = ";
+    if(y11>1){
+        uplusv(input2, c11);
+    }
+    cout<<"(";
     ans += "(";
     all_algebraic();
     all_partition();
