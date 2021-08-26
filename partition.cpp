@@ -52,6 +52,28 @@ void partition_null(){
     all_p = 0;
 }
 
+int as_we_know_type(char input[100]){
+    int x12=0, as_we_k = 0;
+    char s12='\0';
+    for(int i=0; i<strlen(input); i++){
+        x12 = find_char_type(input[i]);
+        if(x12==3){
+            if(input[i-1]=='(')
+                continue;
+            else if(input[i]=='*')
+                continue;
+            else if(input[i-1]!='^')
+                s12 = input[i];
+            else
+                continue;
+        }
+        if(s12=='+' || s12=='-' || input[i]==')')
+            as_we_k++;
+        s12 = '\0';
+    }
+    return as_we_k;
+}
+
 string value_partition(char input[100], int tokens[100]) {
     int power=1, coeff=1;
     char variable, sign='\0';
@@ -131,7 +153,7 @@ string value_partition(char input[100], int tokens[100]) {
 //    cout<<ans3;
     ans3 += ")";
     if(all_p>0)
-        cout<<"\n\n\t\t\t= ";
+        cout<<"\n\n\t\t\t    = ";
     return ans3;
 }
 

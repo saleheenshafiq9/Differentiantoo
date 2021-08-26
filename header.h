@@ -36,6 +36,7 @@ bool function_uv(char[]);
 string if_ubyv(char[]);
 bool function_ubyv(char[]);
 int trigon_sign();
+int as_we_know_type(char[]);
 #define Debug(x)  cout<< #x<< ": "<< x<< '\n';
 
 bool is_bracket(char);

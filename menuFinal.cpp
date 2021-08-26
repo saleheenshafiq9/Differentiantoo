@@ -31,9 +31,40 @@ void clrscr()
 
 void if_algebric(char input2[100]){
 
+    int x11, y11;
+    char c11 ='\0';
 //    cout<<"(";
+    y11 = as_we_know_type(input2);
+    if(y11==1){
+        cout<<"\n\n\t\t"<<"As we know-"<<"\n\n\t\t\t";
+        cout<<"d/dx(x^n) = n*x^(n-1) [The Power Rule of Derivatives]";
+    }
+    else if(y11>1){
+        cout<<"\n\n\t\t"<<"As we know-"<<"\n\n\t\t\t";
+        cout<<"d/dx(u+v) = d/dx(u) + d/dx(v) ; Thus we have to find the derivatives of each parts separately"<<"\n\n\t\t\t";
+        cout<<"d/dx(x^n) = n*x^(n-1) [The Power Rule of Derivatives]";
+    }
+
     cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
-    cout<<"  "<<input2<<"\n\n\t\t\t= (";
+    cout<<"  f = "<<input2<<"\n\n\t\t    d/d";
+
+    for(int i=0; i<strlen(input2); i++){
+        x11 = find_char_type(input2[i]);
+        if(x11==1){
+            c11 = input2[i];
+            break;
+        }
+    }
+
+    if(c11=='\0'){
+        c11 = 'x';
+        cout<<c11;
+    }
+
+    else
+        cout<<c11;
+
+    cout<<"(f) = d/d"<<c11<<input2<<"\n\n\t\t\t    = (";
     ans += "(";
     all_algebraic();
     all_partition();

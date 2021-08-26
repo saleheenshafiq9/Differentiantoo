@@ -59,7 +59,7 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //            cout<<universal_sign;
             ans2 += universal_sign;
             if(all_a>0)
-                cout<<universal_sign<<"(";
+                cout<<" "<<universal_sign<<" (";
         }
         else if(new_coeff<0 && new_power!=0) {
             if(sign_remover==0){
@@ -68,7 +68,7 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //                    cout<<"-";
                     ans2 += "-";
                     if(all_a>0)
-                        cout<<"-(";
+                        cout<<" - (";
                 }
             }
             else {
@@ -76,19 +76,19 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //                    cout<<"-";
                     ans2 += "-";
                     if(all_a>0)
-                        cout<<"+(";
+                        cout<<" + (";
                 }
                 else if(new_power<0 && universal_sign=='-'){
 //                    cout<<"+";
                     ans2 += "+";
                     if(all_a>0)
-                        cout<<"-(";
+                        cout<<" - (";
                 }
                 else{
 //                    cout<<"-";
                     ans2 += "-";
                     if(all_a>0)
-                        cout<<"+(";
+                        cout<<" + (";
                 }
             }
         }
@@ -96,7 +96,7 @@ string differentiate(int coeff, char variable, int power, char sign) {
 //            cout<<universal_sign;
             ans2 += universal_sign;
             if(all_a>0)
-                cout<<universal_sign<<"(";
+                cout<<" "<<universal_sign<<" (";
         }
         if(new_coeff!=1 && new_coeff!=-1){
 //            cout<<abs(new_coeff);
