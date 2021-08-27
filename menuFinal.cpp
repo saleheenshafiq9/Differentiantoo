@@ -143,6 +143,36 @@ void menu(){
             bool root_tracker = function_root(input);
 
             if(trigonometry_tracker==true){
+                int x15, y15=0;
+                char c15 ='\0';
+
+                cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
+                cout<<"  f = "<<input<<"\n\n\t\t    d/d";
+
+                for(int i=0; i<strlen(input); i++){
+                    if(input[i]!='(' && y15==0)
+                       continue;
+
+                    else{
+                        y15++;
+                        x15 = find_char_type(input[i]);
+                        if(x15==1){
+                            c15 = input[i];
+                            break;
+                        }
+                    }
+                }
+
+                if(c15=='\0'){
+                    c15 = 'x';
+                cout<<c15;
+                }
+
+                else
+                    cout<<c15;
+
+                cout<<"(f) = d/d"<<c15<<" "<<input<<"\n\n\t\t\t    = ";
+
                 ans += if_trigonometry(input);
                 fans.push_back(ans);
                 ans = "";
