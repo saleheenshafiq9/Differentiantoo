@@ -181,6 +181,7 @@ void menu(){
             }
 
             else if(ln_tracker==true){
+                    all_ln();
                 int x16, y16=0;
                 char c16 ='\0';
 
@@ -217,6 +218,7 @@ void menu(){
                 ans += if_ln(input);
                 fans.push_back(ans);
                 ans = "";
+                null_ln();
             }
 
             else if(root_tracker==true){

@@ -3,6 +3,7 @@
 using namespace std;
 
 int token_ln = 0;
+int all_l = 0;
 
 bool function_ln(char input[100]) {
 
@@ -12,6 +13,14 @@ bool function_ln(char input[100]) {
         return true;
     else
         return false;
+}
+
+void all_ln(){
+    all_l++;
+}
+
+void null_ln(){
+    all_l = 0;
 }
 
 string if_ln(char input[100]) {
@@ -61,43 +70,49 @@ string if_ln(char input[100]) {
 //    }
 
     if(k!=1 && trigon_tracker_ln==false && ln_tracker_ln==false) {
-        int x18, y18=0;
-        char c18 ='\0';
+        if(all_l>0){
+            int x18, y18=0;
+            char c18 ='\0';
 
-        cout<<"d/d";
+            cout<<"d/d";
 
-        for(int i=0; i<strlen(input); i++){
-            if(input[i]!='(' && y18==0)
-                continue;
+            for(int i=0; i<strlen(input); i++){
+                if(input[i]!='(' && y18==0)
+                    continue;
 
-            else{
-                y18++;
-                x18 = find_char_type(input[i]);
-                if(x18==1){
-                    c18 = input[i];
-                    break;
+                else{
+                    y18++;
+                    x18 = find_char_type(input[i]);
+                    if(x18==1){
+                        c18 = input[i];
+                        break;
+                    }
                 }
             }
-        }
 
-        if(c18=='\0'){
-            c18 = 'x';
-            cout<<c18;
-        }
+            if(c18=='\0'){
+                c18 = 'x';
+                cout<<c18;
+            }
 
-        else
-            cout<<c18;
+            else
+                cout<<c18;
 
-        cout<<ln_chain<<"/";
-//        cout<<"(";
+            cout<<ln_chain<<"/";
+
+            }
+
+
         ans6 += "(";
         ans6 += partition(ln_chain);
 //        cout<<"/"<<ln_chain;
         ans6 += "/";
         for(int i=0; ln_chain[i]!='\0'; i++)
             ans6 += ln_chain[i];
-        cout<<ln_chain;
-        cout<<"\n\n\t\t\t    = ";
+        if(all_l>0){
+            cout<<ln_chain;
+            cout<<"\n\n\t\t\t    = ";
+        }
     }
 
     else if(k==1 && trigon_tracker_ln==false && ln_tracker_ln==false){
@@ -119,6 +134,7 @@ string if_ln(char input[100]) {
     }
 
     else if(trigon_tracker_ln==true || ln_tracker_ln==true) {
+
         if(trigon_tracker_ln==true){
             if(k==1){
                 for(int i=0; i<strlen(ln_chain); i++){
