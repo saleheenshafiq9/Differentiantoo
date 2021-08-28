@@ -61,6 +61,34 @@ string if_ln(char input[100]) {
 //    }
 
     if(k!=1 && trigon_tracker_ln==false && ln_tracker_ln==false) {
+        int x18, y18=0;
+        char c18 ='\0';
+
+        cout<<"d/d";
+
+        for(int i=0; i<strlen(input); i++){
+            if(input[i]!='(' && y18==0)
+                continue;
+
+            else{
+                y18++;
+                x18 = find_char_type(input[i]);
+                if(x18==1){
+                    c18 = input[i];
+                    break;
+                }
+            }
+        }
+
+        if(c18=='\0'){
+            c18 = 'x';
+            cout<<c18;
+        }
+
+        else
+            cout<<c18;
+
+        cout<<ln_chain<<"/";
 //        cout<<"(";
         ans6 += "(";
         ans6 += partition(ln_chain);
@@ -68,6 +96,8 @@ string if_ln(char input[100]) {
         ans6 += "/";
         for(int i=0; ln_chain[i]!='\0'; i++)
             ans6 += ln_chain[i];
+        cout<<ln_chain;
+        cout<<"\n\n\t\t\t    = ";
     }
 
     else if(k==1 && trigon_tracker_ln==false && ln_tracker_ln==false){

@@ -38,6 +38,8 @@ bool function_ubyv(char[]);
 int trigon_sign();
 int as_we_know_type(char[]);
 void uplusv(char[],char);
+void all_trigon();
+void null_trigon();
 #define Debug(x)  cout<< #x<< ": "<< x<< '\n';
 
 bool is_bracket(char);

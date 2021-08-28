@@ -99,7 +99,7 @@ void func_checker(){
 }
 
 void menu(){
-    int n,l=50;
+    int n,l=50,xx;
     displayhead();
     cout<<"\n\n\t\t\t\t--> INPUT AN EQUATION (Press '1')";
     cout<<"\n\n\t\t\t\t--> DERIVATIVE FORMULAS (Press '2')";
@@ -143,6 +143,7 @@ void menu(){
             bool root_tracker = function_root(input);
 
             if(trigonometry_tracker==true){
+                all_trigon();
                 int x15, y15=0;
                 char c15 ='\0';
 
@@ -176,15 +177,79 @@ void menu(){
                 ans += if_trigonometry(input);
                 fans.push_back(ans);
                 ans = "";
+                null_trigon();
             }
 
             else if(ln_tracker==true){
+                int x16, y16=0;
+                char c16 ='\0';
+
+                cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
+                cout<<"  f = "<<input<<"\n\n\t\t    d/d";
+
+                for(int i=0; i<strlen(input); i++){
+                    if(input[i]!='(' && y16==0)
+                       continue;
+
+                    else{
+                        if(find_char_type(input[i+1])==1 && find_char_type(input[i+2])==1){
+                            continue;
+                        }
+                        y16++;
+                        x16 = find_char_type(input[i]);
+                        if(x16==1){
+                            c16 = input[i];
+                            break;
+                        }
+                    }
+                }
+
+                if(c16=='\0'){
+                    c16 = 'x';
+                cout<<c16;
+                }
+
+                else
+                    cout<<c16;
+
+                cout<<"(f) = d/d"<<c16<<" "<<input<<"\n\n\t\t\t    = ";
+
                 ans += if_ln(input);
                 fans.push_back(ans);
                 ans = "";
             }
 
             else if(root_tracker==true){
+                int x17, y17=0;
+                char c17 ='\0';
+
+                cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
+                cout<<"  f = "<<input<<"\n\n\t\t    d/d";
+
+                for(int i=0; i<strlen(input); i++){
+                    if(input[i]!='(' && y17==0)
+                       continue;
+
+                    else{
+                        y17++;
+                        x17 = find_char_type(input[i]);
+                        if(x17==1){
+                            c17 = input[i];
+                            break;
+                        }
+                    }
+                }
+
+                if(c17=='\0'){
+                    c17 = 'x';
+                    cout<<c17;
+                }
+
+                else
+                    cout<<c17;
+
+                cout<<"(f) = d/d"<<c17<<" "<<input<<"\n\n\t\t\t    = ";
+
                 ans += if_root(input);
                 fans.push_back(ans);
                 ans = "";
@@ -211,25 +276,25 @@ void menu(){
             clrscr();
             displayhead();
             cout<<"\n\n\t GENERAL FORMULA :";
-            cout<<"\n\n\t\t\t--> 1) d/dx(c) = 0 ; c is any constant.";
-            cout<<"\n\n\t\t\t--> 2) d/dx(x^n) = n*x^(n-1) [The Power Rule of Derivatives]";
+            cout<<"\n\n\t\t\t--> 1) d/dx(c) = 0 ; c is any constant."<<"\tPRESS '1' to see examples";
+            cout<<"\n\n\t\t\t--> 2) d/dx(x^n) = n*x^(n-1) [The Power Rule of Derivatives]"<<"\tPRESS '2' to see examples";
             cout<<"\n\n\t\t\t--> 3) d/dx(x) = 1";
-            cout<<"\n\n\t\t\t--> 4) d/dx(u+v) = d/dx(u) + d/dx(v) ; u and v are two functions consist of variable 'x'.";
-            cout<<"\n\n\t\t\t--> 5) d/dx(u*v) = u*d/dx(v) + v*d/dx(u) ; u and v are two functions consist of variable 'x'.";
-            cout<<"\n\n\t\t\t--> 6) d/dx(u/v) = [v*d/dx(u) - u*d/dx(v)]/v^2 ; u and v are two functions consist of variable 'x'.";
-            cout<<"\n\n\t\t\t--> 7) d/dx(sqrt(x)) = 1/2*sqrt(x)";
+            cout<<"\n\n\t\t\t--> 4) d/dx(u+v) = d/dx(u) + d/dx(v) ; u and v are two functions consist of variable 'x'."<<"\tPRESS '4' to see examples";
+            cout<<"\n\n\t\t\t--> 5) d/dx(u*v) = u*d/dx(v) + v*d/dx(u) ; u and v are two functions consist of variable 'x'."<<"\tPRESS '5' to see examples";
+            cout<<"\n\n\t\t\t--> 6) d/dx(u/v) = [v*d/dx(u) - u*d/dx(v)]/v^2 ; u and v are two functions consist of variable 'x'."<<"\tPRESS '6' to see examples";
+            cout<<"\n\n\t\t\t--> 7) d/dx(sqrt(x)) = 1/2*sqrt(x)"<<"\tPRESS '7' to see examples";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF LOGARITHMIC FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 8) d/dx(ln(x)) = 1/x";
-            cout<<"\n\n\t\t\t--> 9) d/dx(ln(u)) = d/dx(u)/u ; u is a function consists of variable 'x'.";
+            cout<<"\n\n\t\t\t--> 8) d/dx(ln(x)) = 1/x"<<"\tPRESS '8' to see examples";
+            cout<<"\n\n\t\t\t--> 9) d/dx(ln(u)) = d/dx(u)/u ; u is a function consists of variable 'x'."<<"\tPRESS '9' to see examples";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF TRIGONOMETRIC FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 10) d/dx(sin(x)) = cos(x)";
-            cout<<"\n\n\t\t\t--> 11) d/dx(cos(x)) = -sin(x)";
-            cout<<"\n\n\t\t\t--> 12) d/dx(tan(x)) = sec^2(x)";
-            cout<<"\n\n\t\t\t--> 13) d/dx(sec(x)) = sec(x)*tan(x)";
-            cout<<"\n\n\t\t\t--> 14) d/dx(cot(x)) = -cosec^2(x)";
-            cout<<"\n\n\t\t\t--> 15) d/dx(cosec(x)) = -cosec(x)*cot(x)";
+            cout<<"\n\n\t\t\t--> 10) d/dx(sin(x)) = cos(x)"<<"\tPRESS '10' to see examples";
+            cout<<"\n\n\t\t\t--> 11) d/dx(cos(x)) = -sin(x)"<<"\tPRESS '11' to see examples";
+            cout<<"\n\n\t\t\t--> 12) d/dx(tan(x)) = sec^2(x)"<<"\tPRESS '12' to see examples";
+            cout<<"\n\n\t\t\t--> 13) d/dx(sec(x)) = sec(x)*tan(x)"<<"\tPRESS '13' to see examples";
+            cout<<"\n\n\t\t\t--> 14) d/dx(cot(x)) = -cosec^2(x)"<<"\tPRESS '14' to see examples";
+            cout<<"\n\n\t\t\t--> 15) d/dx(cosec(x)) = -cosec(x)*cot(x)"<<"\tPRESS '15' to see examples";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF HYPERBOLIC FUNCTIONS :";
             cout<<"\n\n\t\t\t--> 16) d/dx(sinh(x)) = cosh(x)";
@@ -240,11 +305,15 @@ void menu(){
             cout<<"\n\n\t\t\t--> 21) d/dx(cosech(x)) = -cosech(x)*coth(x)";
 
             cout<<"\n\n\n\n\t DERIVATIVES OF EXPONENTIAL FUNCTIONS :";
-            cout<<"\n\n\t\t\t--> 22) d/dx(e^x) = e^x";
-            cout<<"\n\n\t\t\t--> 23) d/dx(x^x) = x^x*(1+ln(x))";
-            cout<<"\n\n\t\t\t--> 24) d/dx(a^x) = a^x*ln(a)";
+            cout<<"\n\n\t\t\t--> 22) d/dx(e^x) = e^x"<<"\tPRESS '22' to see examples";
+            cout<<"\n\n\t\t\t--> 23) d/dx(x^x) = x^x*(1+ln(x))"<<"\tPRESS '23' to see examples";
+            cout<<"\n\n\t\t\t--> 24) d/dx(a^x) = a^x*ln(a)"<<"\tPRESS '24' to see examples";
 
+            cin>>xx;
 
+            if(xx==9){
+//                cout<<
+            }
             menu3();
         }
         else if(n==4)
