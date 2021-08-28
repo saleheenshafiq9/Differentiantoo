@@ -42,6 +42,8 @@ void all_trigon();
 void null_trigon();
 void all_ln();
 void null_ln();
+void all_root();
+void null_root();
 #define Debug(x)  cout<< #x<< ": "<< x<< '\n';
 
 bool is_bracket(char);

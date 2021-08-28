@@ -3,6 +3,7 @@
 using namespace std;
 
 int token_root = 0;
+int all_r = 0;
 
 bool function_root(char input[100]) {
 
@@ -12,6 +13,14 @@ bool function_root(char input[100]) {
         return true;
     else
         return false;
+}
+
+void all_root(){
+    all_r++;
+}
+
+void null_root(){
+    all_r = 0;
 }
 
 string if_root(char input[100]) {
@@ -65,6 +74,38 @@ string if_root(char input[100]) {
     }
 
     else if(k==1 && trigon_tracker_root==false && ln_tracker_root==false){
+        if(all_r>0){
+            int x20, y20=0;
+            char c20 ='\0';
+
+            cout<<"d/d";
+
+            for(int i=0; i<strlen(input); i++){
+                if(input[i]!='(' && y20==0)
+                    continue;
+
+                else{
+                    y20++;
+                    x20 = find_char_type(input[i]);
+                    if(x20==1){
+                        c20 = input[i];
+                        break;
+                    }
+                }
+            }
+
+            if(c20=='\0'){
+                c20 = 'x';
+                cout<<c20;
+            }
+
+            else
+                cout<<c20;
+
+            cout<<root_chain<<"/";
+
+        }
+
         if(var_root=='\0'){
             ans7 = "0";
             return ans7;
@@ -79,6 +120,11 @@ string if_root(char input[100]) {
             ans7 += "2*sqrt(";
             for(int i=0; root_chain[i]!='\0'; i++)
                 ans7 += root_chain[i];
+        }
+
+        if(all_r>0){
+            cout<<root_chain;
+            cout<<"\n\n\t\t\t    = ";
         }
     }
 

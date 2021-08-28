@@ -222,6 +222,7 @@ void menu(){
             }
 
             else if(root_tracker==true){
+                all_root();
                 int x17, y17=0;
                 char c17 ='\0';
 
@@ -255,6 +256,8 @@ void menu(){
                 ans += if_root(input);
                 fans.push_back(ans);
                 ans = "";
+
+                null_root();
             }
 
             else {
