@@ -165,7 +165,7 @@ string if_trigonometry(char input[100]) {
 
 //    for(int i=0; i<strlen(trigonometry_chain); i++)
 //        cout<<trigonometry_chain[i];
-    if(all_t>0){
+    if(all_t>0 && k!=1){
 
         cout<<"d/d";
 
@@ -174,6 +174,10 @@ string if_trigonometry(char input[100]) {
 
         for(int i=0; i<strlen(input); i++){
             if(input[i]!='(' && y19==0)
+                continue;
+            if(find_char_type(input[i])==1 && find_char_type(input[i+1])==1)
+               continue;
+            if(find_char_type(input[i])==1 && input[i+1]=='(')
                 continue;
 
             else{
@@ -201,7 +205,7 @@ string if_trigonometry(char input[100]) {
 //        cout<<"-";
         if(k5==0){
             ans5 += "-";
-            if(all_t>0)
+            if(all_t>0 && k!=1)
                 cout<<"-";
         }
     }
@@ -231,7 +235,7 @@ string if_trigonometry(char input[100]) {
     }
 
     if(token_trigo==1){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"sin"<<trigonometry_chain;
 
         ans5 += "sin";
@@ -242,7 +246,7 @@ string if_trigonometry(char input[100]) {
     }
 
     else if(token_trigo==6){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"cosec"<<trigonometry_chain<<"*cot"<<trigonometry_chain;
         ans5 += "cosec";
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
@@ -253,7 +257,7 @@ string if_trigonometry(char input[100]) {
     }
 
     else if(token_trigo==2){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"cos"<<trigonometry_chain;
         ans5 += "cos";
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
@@ -261,7 +265,7 @@ string if_trigonometry(char input[100]) {
     }
 
     else if(token_trigo==3){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"sec^2"<<trigonometry_chain;
         ans5 += "sec^2";
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
@@ -269,7 +273,7 @@ string if_trigonometry(char input[100]) {
     }
 
     else if(token_trigo==4){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"cosec^2"<<trigonometry_chain;
         ans5 += "cosec^2";
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
@@ -277,7 +281,7 @@ string if_trigonometry(char input[100]) {
     }
 
     else if(token_trigo==5){
-        if(all_t>0)
+        if(all_t>0 && k!=1)
             cout<<"sec"<<trigonometry_chain<<"*tan"<<trigonometry_chain;
         ans5 += "sec";
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
@@ -286,10 +290,10 @@ string if_trigonometry(char input[100]) {
         for(int i=0; trigonometry_chain[i]!='\0'; i++)
             ans5 += trigonometry_chain[i];
     }
-    if(all_t>0)
+    if(all_t>0 && k!=1)
         cout<<"\n\n\t\t\t    = ";
     token_trigo = 0;
     k5 = 0;
     return ans5;
-
+    null_trigon();
 }

@@ -26,6 +26,7 @@ void null_ln(){
 string if_ln(char input[100]) {
 
     string ans6 = "";
+    string ans11 = "";
     char ln_chain[50];
     int j=0,k;
     char var_ln;
@@ -136,6 +137,11 @@ string if_ln(char input[100]) {
     else if(trigon_tracker_ln==true || ln_tracker_ln==true) {
 
         if(trigon_tracker_ln==true){
+            if(all_l>0){
+                all_trigon();
+                cout<<"> First of all, we have to differentiate the part inside ln().\n\n\t\t\tSo-\n\n\t\t\t    = ";
+            }
+
             if(k==1){
                 for(int i=0; i<strlen(ln_chain); i++){
                     if(ln_chain[i]=='(' && ln_chain[i+1]==')'){
@@ -145,7 +151,12 @@ string if_ln(char input[100]) {
                     }
                 }
             }
-            ans6 += if_trigonometry(ln_chain);
+            ans11 += if_trigonometry(ln_chain);
+            ans6 += ans11;
+            if(all_l>0){
+                cout<<ans11;
+                cout<<"\n\n\n\t\t\tFinally-\n\n\t\t\t    = ";
+            }
         }
 
         else if(ln_tracker_ln==true)
