@@ -147,6 +147,7 @@ void menu(){
             bool trigonometry_tracker = function_trigonometry(input);
             bool ln_tracker = function_ln(input);
             bool root_tracker = function_root(input);
+            bool exp_tracker = function_exp(input);
 
             if(trigonometry_tracker==true){
                 all_trigon();
@@ -266,6 +267,47 @@ void menu(){
                 null_root();
             }
 
+            else if(exp_tracker==true){
+                all_exp();
+                int x25, y25=0;
+                char c25 ='\0';
+
+                cout<<"\n\n\t\t"<<"Given-"<<"\n\t\t\t";
+                cout<<"  f = "<<input<<"\n\n\t\t    d/d";
+
+                for(int i=0; i<strlen(input); i++){
+                    if(input[i]!='(' && y25==0)
+                       continue;
+
+                    else{
+                        if(find_char_type(input[i+1])==1 && find_char_type(input[i+2])==1){
+                            continue;
+                        }
+                        y25++;
+                        x25 = find_char_type(input[i]);
+                        if(x25==1){
+                            c25 = input[i];
+                            break;
+                        }
+                    }
+                }
+
+                if(c25=='\0'){
+                    c25 = 'x';
+                cout<<c25;
+                }
+
+                else
+                    cout<<c25;
+
+                cout<<"(f) = d/d"<<c25<<" "<<input<<"\n\n\t\t\t    = ";
+
+                ans += if_exp(input);
+                fans.push_back(ans);
+                ans = "";
+                null_exp();
+            }
+
             else {
                 if_algebric(input);
             }
@@ -374,6 +416,13 @@ void menu(){
 
             else if(xx=9){
                 ans += if_ln("ln(5*x^3)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+            }
+
+            else if(xx=22){
+                ans += if_exp("e^(5*x^3)");
                 fans.push_back(ans);
                 ans = "";
                 vect_show();

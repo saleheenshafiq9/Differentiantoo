@@ -44,6 +44,10 @@ void all_ln();
 void null_ln();
 void all_root();
 void null_root();
+void all_exp();
+void null_exp();
+string if_exp(char[]);
+bool function_exp(char[]);
 #define Debug(x)  cout<< #x<< ": "<< x<< '\n';
 
 bool is_bracket(char);

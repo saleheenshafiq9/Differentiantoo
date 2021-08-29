@@ -54,6 +54,7 @@ string if_ubyv(char input[100]) {
     bool trigonometry_tracker5 = function_trigonometry(first_uv1);
     bool ln_tracker5 = function_ln(first_uv1);
     bool root_tracker5 = function_root(first_uv1);
+    bool exp_tracker5 = function_exp(first_uv1);
 
     if(trigonometry_tracker5==true){
         sing_comp = trigon_sign();
@@ -98,6 +99,15 @@ string if_ubyv(char input[100]) {
         ddx_f1 += if_root(first_uv1);
     }
 
+    else if(exp_tracker5==true){
+        if(if_exp(first_uv1)!="0"){
+            ans9 += second_uv1;
+            ans9 += "*";
+            ans9 += if_exp(first_uv1);
+        }
+        ddx_f1 += if_exp(first_uv1);
+    }
+
     else {
         string s8 = "(";
         s8 += partition(first_uv1);
@@ -112,6 +122,7 @@ string if_ubyv(char input[100]) {
     bool trigonometry_tracker4 = function_trigonometry(second_uv1);
     bool ln_tracker4 = function_ln(second_uv1);
     bool root_tracker4 = function_root(second_uv1);
+    bool exp_tracker4 = function_exp(second_uv1);
 
     if(trigonometry_tracker4==true){
         sign_comp = trigon_sign();
@@ -158,6 +169,15 @@ string if_ubyv(char input[100]) {
             ans9 += if_root(second_uv1);
         }
         ddx_s1 += if_root(second_uv1);
+    }
+
+    else if(exp_tracker4==true){
+        if(if_exp(second_uv1)!="0"){
+            ans9 += first_uv1;
+            ans9 += "*";
+            ans9 += if_exp(second_uv1);
+        }
+        ddx_s1 += if_exp(second_uv1);
     }
 
     else {
