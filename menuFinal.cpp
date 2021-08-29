@@ -76,6 +76,12 @@ void if_algebric(char input2[100]){
     fans.push_back(ans);
 }
 
+void vect_show(){
+    for (int i = 0; i < fans.size(); ++i){
+        cout << fans[i] << "\n";
+    }
+}
+
 void menu3(){
     int p;
     cout<<"\n\n";
@@ -270,8 +276,9 @@ void menu(){
 //            cout<<"\n"<<fans[1]<<"\n";
 ////            fans.push_back(input.c_string());
         for (int i = 0; i < fans.size(); ++i){
-            cout << fans[i] << "\n";
+            cout << fans[i];
         }
+        cout<<"\t"<<"[Ans]"<<"\n";
 
             menu3();
 
@@ -314,11 +321,64 @@ void menu(){
             cout<<"\n\n\t\t\t--> 23) d/dx(x^x) = x^x*(1+ln(x))"<<"\tPRESS '23' to see examples";
             cout<<"\n\n\t\t\t--> 24) d/dx(a^x) = a^x*ln(a)"<<"\tPRESS '24' to see examples";
 
+            cout<<"\n\n";
             cin>>xx;
 
-            if(xx==9){
+            if(xx==1){
+                if_algebric("(5)");
+                vect_show();
 //                cout<<
             }
+
+            else if(xx==2){
+                if_algebric("(x^5)");
+                vect_show();
+//                cout<<
+            }
+            else if(xx==4){
+                if_algebric("(x^5+5*x^4)");
+                vect_show();
+//                cout<<
+            }
+
+            else if(xx==5){
+                ans += if_uv("(x^5)*sin(x)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+//                cout<<
+            }
+
+            else if(xx==6){
+                ans += if_ubyv("tan(x)/(x^3)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+//                cout<<
+            }
+
+            else if(xx==7){
+                ans += if_root("sqrt(5*x)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+//                cout<<
+            }
+
+            else if(xx=8){
+                ans += if_ln("ln(x)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+            }
+
+            else if(xx=9){
+                ans += if_ln("ln(5*x^3)");
+                fans.push_back(ans);
+                ans = "";
+                vect_show();
+            }
+
             menu3();
         }
         else if(n==4)
