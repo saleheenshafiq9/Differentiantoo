@@ -54,42 +54,54 @@ string if_uv(char input[100]) {
     if(trigonometry_tracker2==true){
         sing_comp1 = trigon_sign();
 
-        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4)
-            ans8 += "-";
+        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4){
+            if(if_trigonometry(second_uv)!="0")
+                ans8 += "-";
+        }
     }
 
     if(trigonometry_tracker2==true){
-        ans8 += first_uv;
-        ans8 += "*";
 
-        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4)
-            ddx_s += "-";
+        if(sing_comp1==1 || sing_comp1==6 || sing_comp1==4){
+            if(if_trigonometry(second_uv)!="0")
+                ddx_s += "-";
+        }
 
         string s = if_trigonometry(second_uv);
-        ans8 += s;
+        if(s!="0"){
+            ans8 += first_uv;
+            ans8 += "*";
+            ans8 += s;
+        }
         ddx_s += s;
     }
 
     else if(ln_tracker2==true){
-        ans8 += first_uv;
-        ans8 += "*";
-        ans8 += if_ln(second_uv);
+        if(if_ln(second_uv)!="0"){
+            ans8 += first_uv;
+            ans8 += "*";
+            ans8 += if_ln(second_uv);
+        }
         ddx_s += if_ln(second_uv);
     }
 
     else if(root_tracker2==true){
-        ans8 += first_uv;
-        ans8 += "*";
-        ans8 += if_root(second_uv);
+        if(if_root(second_uv)!="0"){
+            ans8 += first_uv;
+            ans8 += "*";
+            ans8 += if_root(second_uv);
+        }
         ddx_s += if_root(second_uv);
     }
 
     else {
-        ans8 += first_uv;
-        ans8 += "*";
         string s3 = "(";
         s3 += partition(second_uv);
-        ans8 += s3;
+        if(s3!="(0)"){
+            ans8 += first_uv;
+            ans8 += "*";
+            ans8 += s3;
+        }
         ddx_s += s3;
     }
 
@@ -110,37 +122,47 @@ string if_uv(char input[100]) {
         ans8 += "+";
 
     if(trigonometry_tracker3==true){
-        ans8 += second_uv;
-        ans8 += "*";
 
-        if(sign_comp1==1 || sign_comp1==6 || sign_comp1==4)
-            ddx_f += "-";
+        if(sign_comp1==1 || sign_comp1==6 || sign_comp1==4){
+            if(if_trigonometry(first_uv)!="0")
+                ddx_f += "-";
+        }
 
         string s1 = if_trigonometry(first_uv);
-        ans8 += s1;
+        if(s1!="0"){
+            ans8 += second_uv;
+            ans8 += "*";
+            ans8 += s1;
+        }
         ddx_f += s1;
     }
 
     else if(ln_tracker3==true){
-        ans8 += second_uv;
-        ans8 += "*";
-        ans8 += if_ln(first_uv);
+        if(if_ln(first_uv)!="0"){
+            ans8 += second_uv;
+            ans8 += "*";
+            ans8 += if_ln(first_uv);
+        }
         ddx_f += if_ln(first_uv);
     }
 
     else if(root_tracker3==true){
-        ans8 += second_uv;
-        ans8 += "*";
-        ans8 += if_root(first_uv);
+        if(if_root(first_uv)!="0"){
+            ans8 += second_uv;
+            ans8 += "*";
+            ans8 += if_root(first_uv);
+        }
         ddx_f += if_root(first_uv);
     }
 
     else {
-        ans8 += second_uv;
-        ans8 += "*";
         string s2 = "(";
         s2 += partition(first_uv);
-        ans8 += s2;
+        if(s2!="(0)"){
+            ans8 += second_uv;
+            ans8 += "*";
+            ans8 += s2;
+        }
         ddx_f += s2;
     }
     cout<<"d/dx(u) = d/dx "<<first_uv<<"\n\n\t\t\t= ";

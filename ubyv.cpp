@@ -58,42 +58,54 @@ string if_ubyv(char input[100]) {
     if(trigonometry_tracker5==true){
         sing_comp = trigon_sign();
 
-        if(sing_comp==1 || sing_comp==6 || sing_comp==4)
-            ans9 += "-";
+        if(sing_comp==1 || sing_comp==6 || sing_comp==4){
+            if(if_trigonometry(first_uv1)!="0")
+                ans9 += "-";
+        }
     }
 
     if(trigonometry_tracker5==true){
-        ans9 += second_uv1;
-        ans9 += "*";
 
-        if(sing_comp==1 || sing_comp==6 || sing_comp==4)
-            ddx_f1 += "-";
+        if(sing_comp==1 || sing_comp==6 || sing_comp==4){
+            if(if_trigonometry(first_uv1)!="0")
+                ddx_f1 += "-";
+        }
 
         string s7 = if_trigonometry(first_uv1);
-        ans9 += s7;
+        if(s7!="0"){
+            ans9 += second_uv1;
+            ans9 += "*";
+            ans9 += s7;
+        }
         ddx_f1 += s7;
     }
 
     else if(ln_tracker5==true){
-        ans9 += second_uv1;
-        ans9 += "*";
-        ans9 += if_ln(first_uv1);
+        if(if_ln(first_uv1)!="0"){
+            ans9 += second_uv1;
+            ans9 += "*";
+            ans9 += if_ln(first_uv1);
+        }
         ddx_f1 += if_ln(first_uv1);
     }
 
     else if(root_tracker5==true){
-        ans9 += second_uv1;
-        ans9 += "*";
-        ans9 += if_root(first_uv1);
+        if(if_root(first_uv1)!="0"){
+            ans9 += second_uv1;
+            ans9 += "*";
+            ans9 += if_root(first_uv1);
+        }
         ddx_f1 += if_root(first_uv1);
     }
 
     else {
-        ans9 += second_uv1;
-        ans9 += "*";
         string s8 = "(";
         s8 += partition(first_uv1);
-        ans9 += s8;
+        if(s8!="(0)"){
+            ans9 += second_uv1;
+            ans9 += "*";
+            ans9 += s8;
+        }
         ddx_f1 += s8;
     }
 
@@ -114,38 +126,49 @@ string if_ubyv(char input[100]) {
         ans9 += "-";
 
     if(trigonometry_tracker4==true){
-        ans9 += first_uv1;
-        ans9 += "*";
 
-        if(sign_comp==1 || sign_comp==6 || sign_comp==4)
-            ddx_s1 += "-";
+        if(sign_comp==1 || sign_comp==6 || sign_comp==4){
+            if(if_trigonometry(second_uv1)!="0")
+                ddx_s1 += "-";
+        }
 
         string s5 = if_trigonometry(second_uv1);
 //        Debug(s5);
-        ans9 += s5;
+        if(s5!="0"){
+            ans9 += first_uv1;
+            ans9 += "*";
+            ans9 += s5;
+        }
         ddx_s1 += s5;
     }
 
     else if(ln_tracker4==true){
-        ans9 += first_uv1;
-        ans9 += "*";
-        ans9 += if_ln(second_uv1);
+        if(if_ln(second_uv1)!="0"){
+            ans9 += first_uv1;
+            ans9 += "*";
+            ans9 += if_ln(second_uv1);
+        }
         ddx_s1 += if_ln(second_uv1);
     }
 
     else if(root_tracker4==true){
-        ans9 += first_uv1;
-        ans9 += "*";
-        ans9 += if_root(second_uv1);
+        if(if_root(second_uv1)!="0"){
+            ans9 += first_uv1;
+            ans9 += "*";
+            ans9 += if_root(second_uv1);
+        }
         ddx_s1 += if_root(second_uv1);
     }
 
     else {
-        ans9 += first_uv1;
-        ans9 += "*";
+
         string s6 = "(";
         s6 += partition(second_uv1);
-        ans9 += s6;
+        if(s6!="(0)"){
+            ans9 += first_uv1;
+            ans9 += "*";
+            ans9 += s6;
+        }
         ddx_s1 += s6;
     }
 
