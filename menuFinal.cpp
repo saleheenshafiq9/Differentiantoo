@@ -430,6 +430,32 @@ void menu(){
 
             menu3();
         }
+
+        else if(n==3){
+            clrscr();
+            displayhead();
+            cout<<"\n\n\t\t\t--> 1) Any alphabet including uppercase and lowercase is allowed as the variable.\n\n\t\t\t\tEx.  tan(A), (m^2+5*m-6) etc.";
+            cout<<"\n\n\t\t\t--> 2) Following format has to be maintained while giving an input for these operations-\n\n\t\t\t\t";
+            cout<<"Operation\t\t\t\t\tCharacter to be used\n\n\t\t\t\t";
+            cout<<"Addition\t\t\t\t\t+\n\n\t\t\t\t";
+            cout<<"Subtraction\t\t\t\t\t-\n\n\t\t\t\t";
+            cout<<"Multiplication\t\t\t\t\t*\n\n\t\t\t\t";
+            cout<<"Division\t\t\t\t\t/\n\n\t\t\t\t";
+            cout<<"Power\t\t\t\t\t\t^";
+
+            cout<<"\n\n\t\t\t--> 3) A closing bracket is mandatory at the end of every type of function.\n\n\t\t\t\tEx.  ln(tan(x), (3*x^2-4*x), tan(x)*ln(x) etc.";
+            cout<<"\n\n\t\t\t--> 4) Do not use extra brackets while handling negative signs. Appropriate input format is-\n\n\t\t\t\t(-3*x^-5) where co_eff = -3, variable = x, power = -5.";
+            cout<<"\n\n\t\t\t--> 5) For composite functions, use brackets appropriately to identify the composite parts.\n\n\t\t\t\tEx.  tan(3*x^2) here “(“ is necessary to separate the composite functions.";
+            cout<<"\n\n\t\t\t--> 6) If the function is a product or division of two functions, the user needs to put a \n\n\t\t\tcharacter representing multiplication or division at the correct place.\n\n\t\t\t\tEx.  (3*x^2)*tan(x), (2*x)/ln(x) etc.";
+            cout<<"\n\n\t\t\t--> 7) To use the square root function, the user needs to put sqrt() which will represent the square root function.\n\n\t\t\t\tEx.  sqrt(3*x^5) etc.";
+            cout<<"\n\n\t\t\t--> 8) No fractions allowed either as coefficients or as powers. Both will be integers.";
+            cout<<"\n\n\t\t\t--> 9) Power of any trigonometry or ln function has to be 1.";
+            cout<<"\n\n\t\t\t--> 10) The user needs to use appropriate words to mean appropriate function such as-\n\n\t\t\t\ttan(x), cosec(x), ln(p), e^m, sqrt(x^2) etc.";
+            cout<<"\n\n\t\t\t--> 11) Unnecessary spaces are allowed as the project has a  cut_space() function to remove these spaces.\n\n\t\t\t The whole project used brackets as delimiters which is a must to include every time it is needed.";
+
+            cout<<"\n\n";
+             menu3();
+        }
         else if(n==4)
             exit(1);
 }

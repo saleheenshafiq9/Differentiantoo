@@ -58,48 +58,6 @@ bool function_trigonometry(char input[100]) {
         }
     }
 
-//    char* if_cosec = strstr(input,"cosec");
-//
-//    if(if_cosec){
-//        token_trigo = 6;
-//        return true;
-//    }
-//
-//    char* if_cos = strstr(input,"cos");
-//
-//    if(if_cos) {
-//        token_trigo = 1;
-//        return true;
-//    }
-//
-//    char* if_sin = strstr(input,"sin");
-//
-//    if(if_sin) {
-//        token_trigo = 2;
-//        return true;
-//    }
-//
-//    char* if_tan = strstr(input,"tan");
-//
-//    if(if_tan) {
-//        token_trigo = 3;
-//        return true;
-//    }
-//
-//    char* if_cot = strstr(input,"cot");
-//
-//    if(if_cot) {
-//        token_trigo = 4;
-//        return true;
-//    }
-//
-//    char* if_sec = strstr(input,"sec");
-//
-//    if(if_sec) {
-//        token_trigo = 5;
-//        return true;
-//    }
-//    cout<<if_sec<<"check";
 
     if(token_trigo==0)
         return false;

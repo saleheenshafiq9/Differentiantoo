@@ -9,7 +9,6 @@
 #include<cctype>
 #include<cstring>
 #include<vector>
-#include<bits/stdc++.h>
 #include<math.h>
 
 using namespace std;
