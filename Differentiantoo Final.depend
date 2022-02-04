@@ -41,7 +41,7 @@
 1629453888 source:c:\users\saleheen shafiq\documents\github\differentiantoo\calculate.cpp
 	"header.h"
 
-1630206685 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
+1641203521 c:\users\saleheen shafiq\documents\github\differentiantoo\header.h
 	<iostream>
 	<string.h>
 	<sstream>
@@ -53,7 +53,6 @@
 	<cctype>
 	<cstring>
 	<vector>
-	<bits/stdc++.h>
 	<math.h>
 
 1629972937 source:c:\users\saleheen shafiq\documents\github\differentiantoo\differentiate.cpp
